@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
+
 // export class Hero {
 // 	id:number;
 // 	name:string;
@@ -22,18 +25,18 @@ import { HeroService } from './hero.service';
 
 @Component({
   selector: 'my-heroes',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers:[HeroService]
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
   	title = 'Tour of Heroes';
   	// hero = 'windstorm';
-    // heroes = HEROES;
     heroes : Hero[];
     selectedHero:Hero;
 
-    constructor(private heroService:HeroService){}
+    constructor(
+      private router: Router,
+      private heroService: HeroService){}
     ngOnInit(){
       this.getHeroes();
     }
@@ -43,6 +46,6 @@ export class HeroesComponent implements OnInit {
     }
 
     onSelect(hero: Hero):void {
-       this.selectedHero = hero;
+      this.selectedHero = hero;
     }
 }

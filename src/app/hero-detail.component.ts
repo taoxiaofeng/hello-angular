@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute,  ParamMap} from '@angular/router';
+import { Location } from '@angular/common';
 
 import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
 @Component({
 	selector: 'hero-detail',
@@ -14,7 +17,7 @@ import { Hero } from './hero';
       </div>
     </div>`
 })
-export class ComponentNameComponent implements OnInit {
+export class HeroDetailComponent implements OnInit {
 	constructor() {}
 	@Input() hero:Hero;
 	ngOnInit() {
