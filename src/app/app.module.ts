@@ -10,11 +10,12 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
+// import { HeroesComponent } from './hero/heroes/heroes.component';
+// import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
+// import { HeroSearchComponent } from './hero/hero-search/hero-search.component';
 import { HeroService } from './hero.service';
-import { HeroSearchComponent } from './hero-search.component';
+import { HomeComponent } from "./home.component";
 
 @NgModule({
   imports: [
@@ -26,10 +27,11 @@ import { HeroSearchComponent } from './hero-search.component';
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HeroDetailComponent,
-    HeroesComponent,
-    HeroSearchComponent
+    // DashboardComponent,
+    // HeroDetailComponent,
+    // HeroesComponent,
+    // HeroSearchComponent
+    HomeComponent
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]
