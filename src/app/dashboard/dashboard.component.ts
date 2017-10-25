@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Route,  Router, RouterModule, ActivatedRoute } from '@angular/router';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -12,10 +12,21 @@ import { HeroService } from '../hero.service';
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(
+    private heroService: HeroService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 5));
+      .then(heroes => {
+        this.heroes = heroes.slice(1, 5)
+      });
+  }
+
+  goHeroDetail(hero:any) {
+    debugger
+    this.router.navigate(['/hero/hero-detail', hero.id]);
   }
 }
