@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
     `]
 }) 
 export class HomeComponent implements OnInit {
+    private host = location.host;
     private welcome = '../images/welcome.jpg';
     constructor() { }
 

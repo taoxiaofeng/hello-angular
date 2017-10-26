@@ -26,7 +26,6 @@ export class DashboardComponent implements OnInit {
   }
 
   goHeroDetail(hero:any) {
-    debugger
     this.router.navigate(['/hero/hero-detail', hero.id]);
   }
 }
