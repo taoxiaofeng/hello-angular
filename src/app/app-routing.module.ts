@@ -45,13 +45,11 @@ const routes: Routes = [{
   canActivate: [AuthGuard],
   loadChildren:'./dashboard/dashboard.module#DashboardModule'
 }
-// ,{
-//   path: 'hero',
-//   canActivate: [AuthGuard],
-//   loadChildren:'./hero/heroes.module#HeroesModule'
-// },
-  
-];
+,{
+  path: 'hero',
+  canActivate: [AuthGuard],
+  loadChildren:'./hero/heroes.module#HeroesModule'
+}];
 
 // { path: 'detail/:id', component: HeroDetailComponent },
 // { path: 'heroes',     component: HeroesComponent }

@@ -36,12 +36,10 @@ export class HeroSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger
     this.heroes = this.searchTerms
       .debounceTime(300)        // wait 300ms after each keystroke before considering the term
       .distinctUntilChanged()   // ignore if next search term is same as previous
       .switchMap(term => {
-        debugger
         return term ? this.heroSearchService.search(term) : Observable.of<Hero[]>([])
       })
       .catch(error => {
