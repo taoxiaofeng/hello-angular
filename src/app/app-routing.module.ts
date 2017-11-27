@@ -49,6 +49,11 @@ const routes: Routes = [{
   path: 'hero',
   canActivate: [AuthGuard],
   loadChildren:'./hero/heroes.module#HeroesModule'
+}
+,{
+  path: 'test-home',
+  canActivate: [AuthGuard],
+  loadChildren:'./test-home/test-home.module#TestHomeModule'
 }];
 
 // { path: 'detail/:id', component: HeroDetailComponent },
