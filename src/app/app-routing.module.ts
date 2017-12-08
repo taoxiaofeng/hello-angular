@@ -51,9 +51,9 @@ const routes: Routes = [{
   loadChildren:'./hero/heroes.module#HeroesModule'
 }
 ,{
-  path: 'test-home',
+  path: 'dynamic',
   canActivate: [AuthGuard],
-  loadChildren:'./test-home/test-home.module#TestHomeModule'
+  loadChildren:'./dynamic/dynamic.module#DynamicModule'
 }];
 
 // { path: 'detail/:id', component: HeroDetailComponent },
