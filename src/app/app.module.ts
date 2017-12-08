@@ -1,3 +1,4 @@
+import { SharedModule } from './shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -29,7 +30,8 @@ import { HomeComponent } from "./home.component";
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   declarations: [
     AppComponent,
