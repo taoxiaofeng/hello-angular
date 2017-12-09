@@ -1,4 +1,13 @@
 .my-toolbar {
+  max-height: 64px;
+}
+
+.my-toolbar-primary {
+  background: #1976d2;
+  color: #fff;
+}
+
+.my-toolbar-row {
   display: flex;
   box-sizing: border-box;
   width: 100%;
@@ -6,6 +15,38 @@
   flex-direction: row;
   align-items: center;
   white-space: nowrap;
-  background: #1976d2;
-  color: #fff;
+}
+
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 16px 0 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hamburger .mat-button {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link.home img {
+  position: relative;
+  margin-top: -21px;
+  margin-right: 20px;
+  top: 12px;
+  height: 40px;
+}
+
+.home-img {
+  background:url(../../../images/logo-nav.png) fixed;
+  width: 226px;
+  height: 63px;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  padding: 0px;
 }
