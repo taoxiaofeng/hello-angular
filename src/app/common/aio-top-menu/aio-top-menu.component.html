@@ -1,7 +1,17 @@
-<div>
-  <nav>
-    <a routerLink="/dashboard/my-dashboard" routerLinkActive="active">Dashboard</a>
+<div class="aio-top-menu">
+  <nav class="nav-menu">
+    <!-- <a routerLink="/dashboard/my-dashboard" routerLinkActive="active">Dashboard</a>
     <a routerLink="/hero/my-heroes" routerLinkActive="active">Heroes</a>
-    <a routerLink="/dynamic/dynamic" routerLinkActive="active">dynamic</a>
+    <a routerLink="/dynamic/dynamic" routerLinkActive="active">dynamic</a> -->
+
+    <!-- <button (click)="dashboard()">Dashboard</button>
+    <button (click)="heroes()">Heroes</button>
+    <button (click)="dynamic()">Dynamic</button> -->
+
+    <ul role="navigation">
+        <li (click)="dashboard()" title="Dashboard">Dashboard</li>
+        <li (click)="heroes()" title="Heroes">Heroes</li>
+        <li (click)="dynamic()" title="Dynamic">Dynamic</li>
+    </ul>
   </nav>
 </div>

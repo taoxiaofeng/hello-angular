@@ -1,0 +1,32 @@
+.aio-top-menu {}
+
+.nav-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  letter-spacing: .3px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* text-transform: uppercase; 此CSS样式实现无论拼音或单词英文字母都会全部实现转换为大写*/
+.nav-menu ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    text-transform: uppercase; 
+    padding: 15px;
+    list-style: none;
+}

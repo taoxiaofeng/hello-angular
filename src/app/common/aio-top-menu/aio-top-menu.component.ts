@@ -7,7 +7,23 @@ import { Component, OnInit, Input, Output } from '@angular/core';
     styleUrls: ['./aio-top-menu.component.css']
 })
 export class AioTopMenuComponent implements OnInit {
-    constructor() { }
+    constructor(
+        private route:ActivatedRoute,
+        private router:Router
+    ) { }
 
     ngOnInit() { }
+
+    //dashboard
+    dashboard() {
+        this.router.navigate(['/dashboard/my-dashboard']);
+    }
+    //heroes
+    heroes() {
+        this.router.navigate(['/hero/my-heroes']);
+    }
+    //dynamic
+    dynamic() {
+        this.router.navigate(['/dynamic/dynamic']);
+    }
 }
