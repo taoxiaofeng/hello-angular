@@ -1,4 +1,3 @@
-import { SharedModule } from './shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +15,11 @@ import { AppComponent } from './app.component';
 // import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
 // import { HeroSearchComponent } from './hero/hero-search/hero-search.component';
 import { HeroService } from './hero.service';
-import { HomeComponent } from "./home.component";
+import { HomeComponent } from './home.component';
+
+//首页用的组件
+import { MyToolbarModule } from './common/my-toolbar/my-toolbar.module';
+import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
 /**
  * declarations - 声明本模块中拥有的视图类。Angular 有三种视图类：组件、指令和管道。
   exports - declarations 的子集，可用于其它模块的组件模板。
@@ -31,7 +34,8 @@ import { HomeComponent } from "./home.component";
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
-    SharedModule
+    MyToolbarModule,
+    AioTopMenuModule
   ],
   declarations: [
     AppComponent,
