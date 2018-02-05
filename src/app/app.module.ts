@@ -20,6 +20,9 @@ import { HomeComponent } from './home.component';
 //首页用的组件
 import { MyToolbarModule } from './common/my-toolbar/my-toolbar.module';
 import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
+
+//指令
+// import { HighlightDirective } from './attribute-directive/highlight.directive';
 /**
  * declarations - 声明本模块中拥有的视图类。Angular 有三种视图类：组件、指令和管道。
   exports - declarations 的子集，可用于其它模块的组件模板。
@@ -43,7 +46,8 @@ import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
     // HeroDetailComponent,
     // HeroesComponent,
     // HeroSearchComponent
-    HomeComponent
+    HomeComponent,
+    // HighlightDirective
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]

@@ -1,4 +1,23 @@
 <div class="home">
     <span>dynamic</span>
+    <div>
+        <h1>My first Attribute Directive</h1>
+        <h4>Pick a highlight color</h4>
+        <div>
+            <input type="radio" name="colors" (click)="color='lightgreen'">Green
+            <input type="radio" name="colors" (click)="color='yellow'">Yellow
+            <input type="radio" name="colors" (click)="color='cyan'">Cyan
+        </div>
+        <p [appHighlight]="color">Highlight me！</p>
+        <p [appHighlight]="color" defaultColor="violet">Highlight me to</p>
+        <hr>
+        <p>
+            <li>Mouse over the following lines to see fixed highlights</li>
+        </p>
+
+        <p [appHighlight]="'yellow'">Highlightted in  yellow</p>
+        <p appHighlight="orange">Highlight in orange</p>
+
+    </div>
     <p appHightlight>Highlight me!</p>
 </div>

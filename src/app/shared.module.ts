@@ -7,6 +7,7 @@ import { provideInterceptorService } from 'ng2-interceptors';
 import { NgbModule, NgbDatepickerI18n } from '@ng-bootstrap/ng-bootstrap';
 import { HeroSearchModule } from './common/hero-search/hero-search.module';
 import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
+import { HighlightDirectiveModule } from './attribute-directive/highlight.ditective.module';
 
 @NgModule({
     imports:[
@@ -16,7 +17,8 @@ import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
         TreeModule,
         HeroSearchModule,
         MyToolbarModule,
-        AioTopMenuModule
+        AioTopMenuModule,
+        HighlightDirectiveModule
     ],
     exports:[
         NgbModule,
@@ -25,10 +27,11 @@ import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
         TreeModule,
         HeroSearchModule,
         MyToolbarModule,
-        AioTopMenuModule
+        AioTopMenuModule,
+        HighlightDirectiveModule
     ],
     declarations:[
-
+        
     ]
 })
 export class SharedModule {}
