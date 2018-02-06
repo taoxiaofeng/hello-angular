@@ -1,6 +1,6 @@
 <h3>Top Heroes</h3>
 <div class="grid grid-pad">
-    <!-- [routerLink]="['/hero/hero-detail', hero.id]" -->
+  <!-- [routerLink]="['/hero/hero-detail', hero.id]" -->
   <a *ngFor="let hero of heroes" (click)="goHeroDetail(hero);" class="col-1-4">
     <div class="module hero">
       <h4>{{hero.name}}</h4>

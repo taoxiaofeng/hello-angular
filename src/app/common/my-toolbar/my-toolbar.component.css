@@ -36,17 +36,36 @@
 .nav-link.home img {
   position: relative;
   margin-top: -21px;
-  margin-right: 20px;
+  margin-left: 28px;
   top: 12px;
   height: 40px;
 }
 
 .home-img {
-  background:url(../../../images/logo-nav.png) fixed;
+  background: url(../../../images/logo-nav.png) fixed;
   width: 226px;
   height: 63px;
   top: 0px;
   background-repeat: no-repeat;
   background-size: 10%;
   padding: 0px;
+}
+
+.mat-icon {
+    width: 88px;
+    height: 64px;
+}
+
+.mat-icon:hover {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.mat-icon span {
+    width: 30px;
+    height: 0;
+    box-shadow: 20px 10px 0 3px ,20px 0 0 3px ,20px 20px 0 3px;
+    /* color:fff; */
+    display: block;
+    margin: 20px 0 0 10px;
 }

@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
     selector: 'my-home',
     template:`
     <h1 class="welcome">欢迎使用</h1>
-    <div class="welcome-img"><img src="{{welcome}}"></div>
+    <div class="welcome-img">
+        
+    </div>
     `,
     styles:[`
     .welcome,
@@ -14,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
 }) 
 export class HomeComponent implements OnInit {
     private host = location.host;
-    private welcome = '../images/welcome.jpg';
+    private welcome = '../assets/images/welcome.jpg';
     constructor() { }
 
     ngOnInit() { }
