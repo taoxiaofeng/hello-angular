@@ -42,7 +42,7 @@
 }
 
 .home-img {
-  background: url(../../../images/logo-nav.png) fixed;
+  background: url('../../../assets/images/logo-nav.png') fixed;
   width: 226px;
   height: 63px;
   top: 0px;
@@ -52,20 +52,53 @@
 }
 
 .mat-icon {
-    width: 88px;
-    height: 64px;
+  width: 88px;
+  height: 64px;
+  text-align: center;
+  line-height: 80px;
 }
 
 .mat-icon:hover {
-    background-color: black;
-    opacity: 0.5;
+  background-color: black;
+  opacity: 0.3;
 }
 
-.mat-icon span {
-    width: 30px;
-    height: 0;
-    box-shadow: 20px 10px 0 3px ,20px 0 0 3px ,20px 20px 0 3px;
-    /* color:fff; */
-    display: block;
-    margin: 20px 0 0 10px;
+.mat-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.mat-icon button {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  outline: none;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .3s, opacity .5s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
 }
