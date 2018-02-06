@@ -21,12 +21,18 @@
 }
 
 /* text-transform: uppercase; 此CSS样式实现无论拼音或单词英文字母都会全部实现转换为大写*/
+
 .nav-menu ul li {
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
-    text-transform: uppercase; 
-    padding: 15px;
-    list-style: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  text-transform: uppercase;
+  padding: 15px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-menu ul li:hover {
+  color: #e9e9e9;
 }
