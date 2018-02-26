@@ -9,9 +9,10 @@ import { Component, Input } from '@angular/core';
             <p>{{data.bio}}</p>
             <strong>Hire this hero tbody</strong>
         </div>
-    `
+    `,
+    styleUrls:['./sample.css']
 })
 
-export class HeroProfileAdComponent implements AdComponent {
+export class HeroProfileComponent implements AdComponent {
     @Input() data: any;
 }

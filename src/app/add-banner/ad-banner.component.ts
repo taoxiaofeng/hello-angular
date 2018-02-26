@@ -11,7 +11,8 @@ import { AdComponent } from './ad.component';
             <h3>Advertisements</h3>
             <ng-template ad-host></ng-template>
         </div>
-    `
+    `,
+    styleUrls:['./sample.css']
 })
 
 export class AdBannerComponent implements AfterViewInit, OnDestroy {
@@ -25,6 +26,7 @@ export class AdBannerComponent implements AfterViewInit, OnDestroy {
     constructor(private componentFactoryResolver: ComponentFactoryResolver) { };
 
     ngAfterViewInit() {
+        console.log(this.ads);
         this.loadComponent();
         this.getAds();
     }
@@ -34,6 +36,7 @@ export class AdBannerComponent implements AfterViewInit, OnDestroy {
     }
 
     loadComponent() {
+        debugger
         this.currentAddIndex = (this.currentAddIndex + 1) % this.ads.length;
         let adItem = this.ads[this.currentAddIndex];
 

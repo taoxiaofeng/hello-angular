@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
             <h4>{{data.headline}}</h4>
             {{data.body}}
         </div>
-    `
+    `,
+    styleUrls:['./sample.css']
 })
 
 export class HeroJobAdComponent implements AdComponent {

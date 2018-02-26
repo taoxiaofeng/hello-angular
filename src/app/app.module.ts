@@ -22,11 +22,12 @@ import { MyToolbarModule } from './common/my-toolbar/my-toolbar.module';
 import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
 
 //动态组件相关
-import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
-import { HeroProfileAdComponent } from './add-banner/hero-profile.component'
-import { AdBannerComponent } from './add-banner/ad-banner.component';
-import { AdService } from './add-banner/ad.service'; 
-import { AdDirective } from './add-banner/ad.directive';
+import { AdBannerModule } from './add-banner/ad-banner.module';
+// import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
+// import { HeroProfileComponent } from './add-banner/hero-profile.component'
+// import { AdBannerComponent } from './add-banner/ad-banner.component';
+// import { AdService } from './add-banner/ad.service'; 
+// import { AdDirective } from './add-banner/ad.directive';
 
 //指令
 // import { HighlightDirective } from './attribute-directive/highlight.directive';
@@ -38,29 +39,33 @@ import { AdDirective } from './add-banner/ad.directive';
   bootstrap - 指定应用的主视图（称为根组件），它是所有其它视图的宿主。只有根模块才能设置bootstrap属性。
  */
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule,
-    MyToolbarModule,
-    AioTopMenuModule
-  ],
-  declarations: [
-    AppComponent,
-    // DashboardComponent,
-    // HeroDetailComponent,
-    // HeroesComponent,
-    // HeroSearchComponent
-    HomeComponent,
-    // HighlightDirective
-    HeroJobAdComponent,
-    HeroProfileAdComponent,
-    AdBannerComponent,
-    AdDirective
-  ],
-  providers: [ HeroService, AdService ],
-  bootstrap: [ AppComponent ]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        InMemoryWebApiModule.forRoot(InMemoryDataService),
+        AppRoutingModule,
+        MyToolbarModule,
+        AioTopMenuModule,
+        AdBannerModule
+    ],
+    declarations: [
+        AppComponent,
+        // DashboardComponent,
+        // HeroDetailComponent,
+        // HeroesComponent,
+        // HeroSearchComponent
+        HomeComponent,
+        // HighlightDirective
+        // HeroJobAdComponent,
+        // HeroProfileComponent,
+        // AdBannerComponent,
+        // AdDirective
+    ],
+    providers: [
+        HeroService,
+        // AdService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
