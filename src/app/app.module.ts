@@ -21,6 +21,13 @@ import { HomeComponent } from './home.component';
 import { MyToolbarModule } from './common/my-toolbar/my-toolbar.module';
 import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
 
+//动态组件相关
+import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
+import { HeroProfileAdComponent } from './add-banner/hero-profile.component'
+import { AdBannerComponent } from './add-banner/ad-banner.component';
+import { AdService } from './add-banner/ad.service'; 
+import { AdDirective } from './add-banner/ad.directive';
+
 //指令
 // import { HighlightDirective } from './attribute-directive/highlight.directive';
 /**
@@ -48,8 +55,12 @@ import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
     // HeroSearchComponent
     HomeComponent,
     // HighlightDirective
+    HeroJobAdComponent,
+    HeroProfileAdComponent,
+    AdBannerComponent,
+    AdDirective
   ],
-  providers: [ HeroService ],
+  providers: [ HeroService, AdService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
