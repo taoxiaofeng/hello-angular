@@ -34,7 +34,7 @@ nav a.active {
 }
 
 .my-menu {
-  position: absolute;
+  position: fixed;
   top: 7px;
   left: 280px;
   z-index: 10;

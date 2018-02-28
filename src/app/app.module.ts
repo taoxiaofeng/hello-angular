@@ -23,8 +23,8 @@ import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
 
 //动态组件相关
 import { AdBannerModule } from './add-banner/ad-banner.module';
-// import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
-// import { HeroProfileComponent } from './add-banner/hero-profile.component'
+import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
+import { HeroProfileComponent } from './add-banner/hero-profile.component';
 // import { AdBannerComponent } from './add-banner/ad-banner.component';
 // import { AdService } from './add-banner/ad.service'; 
 // import { AdDirective } from './add-banner/ad.directive';
@@ -62,6 +62,11 @@ import { AdBannerModule } from './add-banner/ad-banner.module';
         // AdBannerComponent,
         // AdDirective
     ],
+    /**
+     * 通常，Angular编译器会为模板中所引用的每个组件都生成一个ComponentFactory类。 但是，对于动态加载的组件，模板中不会出现对它们的选择器的引用。
+     * 要想确保编译器照常生成工厂类，就要把这些动态加载的组件添加到NgModule的entryComponents数组中：
+     */
+    entryComponents: [HeroJobAdComponent, HeroProfileComponent],
     providers: [
         HeroService,
         // AdService

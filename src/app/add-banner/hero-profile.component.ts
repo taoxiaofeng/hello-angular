@@ -1,8 +1,7 @@
-import { AdComponent } from './ad.component';
 import { Component, Input } from '@angular/core';
-
+import { AdComponent } from './ad.component';
 @Component({
-    template:`
+    template: `
         <div class="hero-profile">
             <h3>Featured Gero Profile</h3>
             <h4>{{data.name}}</h4>
@@ -10,9 +9,13 @@ import { Component, Input } from '@angular/core';
             <strong>Hire this hero tbody</strong>
         </div>
     `,
-    styleUrls:['./sample.css']
+    styleUrls: ['./sample.css']
 })
 
 export class HeroProfileComponent implements AdComponent {
     @Input() data: any;
+
+    ngOnInit() {
+        console.log(this.data);
+    }
 }
