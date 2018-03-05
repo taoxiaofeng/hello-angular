@@ -1,0 +1,47 @@
+.directive-title {
+    border: 1px solid #D9D9D9;
+    font-size: 12PX;
+    color: #333333;
+    height: 26PX;
+    line-height: 26PX;
+    padding: 0 10px;
+    cursor: pointer;
+    /* border-bottom: none; */
+}
+
+.open {
+    border-bottom: none;
+}
+
+.anticon {
+    display: inline-block;
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: center;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    float: right;
+    line-height: 26px;
+}
+
+.anticon:before {
+    font-weight: 700;
+}
+
+.anticon-right:before {
+    content: "\e61f";
+  }
+
+.anticon-down:before {
+    content: "\E61D";
+}
+
+
+.directive-content {
+    border:1px solid #D9D9D9;
+    background-color: aliceblue;
+    max-height: 150px;
+    overflow-y: scroll;
+}

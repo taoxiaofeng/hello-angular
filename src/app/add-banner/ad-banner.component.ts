@@ -36,7 +36,6 @@ export class AdBannerComponent implements AfterViewInit, OnDestroy {
     }
 
     loadComponent() {
-        debugger
         this.currentAddIndex = (this.currentAddIndex + 1) % this.ads.length;
         let adItem = this.ads[this.currentAddIndex];
 

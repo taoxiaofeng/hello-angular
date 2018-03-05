@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./dynamic.component.css']
 })
 export class DynamicComponent implements OnInit {
-    color:string;
+    directiveShow: boolean;
+    color: string;
     constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() { }
 
 }
 
