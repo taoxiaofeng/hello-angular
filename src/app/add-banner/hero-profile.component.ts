@@ -18,4 +18,8 @@ export class HeroProfileComponent implements AdComponent {
     ngOnInit() {
         console.log(this.data);
     }
+
+    ngAfterViewInit() {
+        // this.data.detach(); //停止检测
+    }
 }
