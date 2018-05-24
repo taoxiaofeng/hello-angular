@@ -7,12 +7,12 @@ import { Hero } from './../hero';
     styleUrls: ['./dynamic.component.css']
 })
 export class DynamicComponent implements OnInit {
-    directiveShow: boolean;
-    templateShow: boolean;
-    color: string;
+    directiveShow: boolean = false;
+    templateShow: boolean = false;
+    color: string = '';
     constructor() { }
 
-    currentHero:Hero;
+    currentHero: Hero;
     heroImageUrl = './../../assets/images/';
 
     ngOnInit() { }
