@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 
 import { AdService } from './add-banner/ad.service';
 import { AdItem } from './add-banner/ad-item';
@@ -11,9 +11,14 @@ export class AppComponent {
     title = 'Tour of Heroes';
     ads: AdItem[];
 
-    constructor(private adService: AdService) { }
+    constructor(
+        private adService: AdService,
+        private changeDetectorRef: ChangeDetectorRef
+    ) { }
 
     ngOnInit() {
+        this.changeDetectorRef.markForCheck();
         this.ads = this.adService.getAds();
+        this.changeDetectorRef.detectChanges();
     }
 }

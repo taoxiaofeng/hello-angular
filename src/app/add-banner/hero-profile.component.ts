@@ -26,6 +26,7 @@ export class HeroProfileComponent implements AdComponent {
     ngAfterViewInit() {
         // this.data.detach(); //停止检测
         // this.changeDetectorRef.detach();
+        this.changeDetectorRef.markForCheck();
         this.changeDetectorRef.detectChanges();
     }
 }

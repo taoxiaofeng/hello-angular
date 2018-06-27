@@ -46,10 +46,14 @@ export class AdBannerComponent implements AfterViewInit, OnDestroy {
         let viewContainerRef = this.adHost.viewContainerRef;
         viewContainerRef.clear();
 
-        this.cdr.detach(); // 停止检测
+        // this.cdr.detach(); // 停止检测
         let componentRef = viewContainerRef.createComponent(componentFactory);
         (<AdComponent>componentRef.instance).data = adItem.data;
-        setTimeout(() => this.cdr.reattach()); // 待组件动态加载完之后重新 attach
+        // setTimeout(() => this.cdr.reattach()); // 待组件动态加载完之后重新 attach
+
+        this.cdr.markForCheck();
+        this.cdr.detectChanges();
+
     }
 
     getAds() {
