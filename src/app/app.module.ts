@@ -49,6 +49,9 @@ import { HeroProfileComponent } from './add-banner/hero-profile.component';
         AioTopMenuModule,
         AdBannerModule
     ],
+    exports:[
+        AppRoutingModule
+    ],
     declarations: [
         AppComponent,
         // DashboardComponent,
