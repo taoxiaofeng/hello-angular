@@ -4,10 +4,13 @@
   </div>
   <div class="my-menu">
     <nav>
-      <a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
-      <a routerLink="/hero/my-heroes" routerLinkActive="active">HEROES</a>
+      <!-- <a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
+      <a routerLink="/hero" routerLinkActive="active">HEROES</a>
       <a routerLink="/dynamic" routerLinkActive="active">DYNAMIC</a>
-      <a routerLink="/router-demo" routerLinkActive="active">ROUTERDEMO</a>
+      <a routerLink="/router-demo" routerLinkActive="active">ROUTERDEMO</a> -->
+      <ng-container *ngFor="let menu of menus">
+        <a routerLink="{{menu.url}}" routerLinkActive="active">{{menu.name}}</a>
+      </ng-container>
     </nav>
     <!-- <aio-top-menu></aio-top-menu> -->
   </div>

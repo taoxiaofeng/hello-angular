@@ -30,6 +30,8 @@ export class RouterDemoComponent implements OnInit {
     }
     // routerDemo
     routerDemo() {
+        let tempUrl = '/router-demo/1001/小明';
         this.router.navigate(['/router-demo', { id: 1001, name: '小明' }]);
+        // this.router.navigateByUrl(tempUrl);
     }
 }

@@ -54,12 +54,12 @@ const routes: Routes = [{
     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
     data: { preload: true }
 },
-// {
-//     path: 'router-demo/:id/:name',
-//     canActivate: [AuthGuard],
-//     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
-//     data: { preload: true }
-// }
+{
+    path: 'router-demo/:id/:name',
+    canActivate: [AuthGuard],
+    loadChildren: './router-demo/router-demo.module#RouterDemoModule',
+    data: { preload: true }
+}
 ];
 
 // { path: 'detail/:id', component: HeroDetailComponent },
