@@ -15,15 +15,39 @@ export class MenuService {
             id: 1,
             iconSrc: '',
             type: [],
-            name: 'DASHBOARD',
-            url: 'dashboard',
+            name: '案例',
+            url: 'demo',
             children: [
                 {
                     id: 1,
                     iconSrc: '',
                     type: [],
-                    name: '子菜单1',
-                    url: '',
+                    name: 'DASHBOARD',
+                    url: 'dashboard',
+                    children: []
+                },
+                {
+                    id: 1,
+                    iconSrc: '',
+                    type: [],
+                    name: 'HERO',
+                    url: 'hero',
+                    children: []
+                },
+                {
+                    id: 1,
+                    iconSrc: '',
+                    type: [],
+                    name: 'DYNAMIC',
+                    url: 'dynamic',
+                    children: []
+                },
+                {
+                    id: 1,
+                    iconSrc: '',
+                    type: [],
+                    name: 'ROUTER',
+                    url: 'router-demo',
                     children: []
                 }
             ]
@@ -32,24 +56,24 @@ export class MenuService {
             id: 1,
             iconSrc: '',
             type: [],
-            name: 'HERO',
-            url: 'hero',
+            name: '案例2',
+            url: 'demo2',
             children: []
         },
         {
             id: 1,
             iconSrc: '',
             type: [],
-            name: 'DYNAMIC',
-            url: 'dynamic',
+            name: '案例3',
+            url: 'demo3',
             children: []
         },
         {
             id: 1,
             iconSrc: '',
             type: [],
-            name: 'ROUTER',
-            url: 'router-demo',
+            name: '案例4',
+            url: 'demo4',
             children: []
         }
     ]
