@@ -15,8 +15,8 @@ export class MenuService {
             id: 1,
             iconSrc: '',
             type: [],
-            name: '案例',
-            url: 'demo',
+            name: '组件',
+            url: 'index',
             children: [
                 {
                     id: 1,
