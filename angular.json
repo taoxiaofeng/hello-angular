@@ -71,7 +71,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/styles-icon.css"
             ],
             "assets": [
               "src/assets",

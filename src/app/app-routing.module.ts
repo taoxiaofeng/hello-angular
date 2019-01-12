@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { Injectable, ModuleWithProviders, NgModule } from '@angular/core';
 import { Routes, RouterModule, CanActivate, Router } from '@angular/router';
 import { HomeComponent } from './home.component';
@@ -26,40 +27,37 @@ const routes: Routes = [{
     path: 'home',
     component: HomeComponent,
     pathMatch: 'full'
-}
-    // ,{
-    //   path: 'my-dashboard', 
-    //   component: DashboardComponent,
-    //   pathMatch: 'full'
-    // }
-    , {
-    path: 'dashboard',
-    canActivate: [AuthGuard],
-    loadChildren: './dashboard/dashboard.module#DashboardModule'
-}
-    , {
-    path: 'hero',
-    canActivate: [AuthGuard],
-    loadChildren: './hero/heroes.module#HeroesModule',
-    data: { preload: true }
-}
-    , {
-    path: 'dynamic',
-    canActivate: [AuthGuard],
-    loadChildren: './dynamic/dynamic.module#DynamicModule',
-    data: { preload: true }
-}, {
-    path: 'router-demo',
-    canActivate: [AuthGuard],
-    loadChildren: './router-demo/router-demo.module#RouterDemoModule',
-    data: { preload: true }
-},
+}, 
 {
-    path: 'router-demo/:id/:name',
+    path:'login',
     canActivate: [AuthGuard],
-    loadChildren: './router-demo/router-demo.module#RouterDemoModule',
-    data: { preload: true }
+    loadChildren: './login/login.module#LoginModule'
 }
+// {
+//     path: 'dashboard',
+//     canActivate: [AuthGuard],
+//     loadChildren: './dashboard/dashboard.module#DashboardModule'
+// }, {
+//     path: 'hero',
+//     canActivate: [AuthGuard],
+//     loadChildren: './hero/heroes.module#HeroesModule',
+//     data: { preload: true }
+// }, {
+//     path: 'dynamic',
+//     canActivate: [AuthGuard],
+//     loadChildren: './dynamic/dynamic.module#DynamicModule',
+//     data: { preload: true }
+// }, {
+//     path: 'router-demo',
+//     canActivate: [AuthGuard],
+//     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
+//     data: { preload: true }
+// }, {
+//     path: 'router-demo/:id/:name',
+//     canActivate: [AuthGuard],
+//     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
+//     data: { preload: true }
+// }
 ];
 
 // { path: 'detail/:id', component: HeroDetailComponent },

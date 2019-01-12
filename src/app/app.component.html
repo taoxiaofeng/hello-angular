@@ -1,6 +1,7 @@
 <div>
   <div>
     <my-toolbar></my-toolbar>
+    <button routerLink="/login" routerLinkActive="active" style="position:absolute;top:18px;right:10px;z-index:10;">登录</button>
   </div>
   <div class="my-menu">
     <nav>
@@ -18,7 +19,7 @@
     <h1>{{title}}</h1>
     <router-outlet></router-outlet>
   </div>
-  <div>
+  <!-- <div>
     <app-add-banner [ads]="ads"></app-add-banner>
-  </div>
+  </div> -->
 </div>
