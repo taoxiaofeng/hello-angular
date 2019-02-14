@@ -16,7 +16,7 @@ export class MenuService {
             iconSrc: '',
             type: [],
             name: '组件',
-            url: 'index',
+            url: 'assembly',
             children: [
                 {
                     id: 1,

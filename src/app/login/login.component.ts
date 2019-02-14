@@ -3,9 +3,10 @@ import { LoginService } from "./login.service";
 import { Router } from "@angular/router";
 
 class User {
-    userName:string = '';
-    password:number = null;
-    code:string = '';
+    userName:string;
+    password:number;
+    code:string;
+    error:string;
 }
 
 @Component({
@@ -15,7 +16,12 @@ class User {
 })
 export class LoginComponent implements OnInit {
     public verificationCode: string = "";
-    public user:User;
+    public user:User = {
+        userName:'',
+        password:null,
+        code:'',
+        error:''
+    };
     constructor(public loginService: LoginService, public router: Router) { }
 
     ngOnInit() { 
@@ -84,18 +90,22 @@ export class LoginComponent implements OnInit {
     //用户信息校验
     checkUserInfo() {
         if(!this.user.userName && !this.user.password) {
+            this.user.error = '请输入用户信息';
             return false;
         }
 
         if(!this.user.userName) {
+            this.user.error = '请输入账号信息';
             return false;
         }
 
         if(!this.user.password) {
+            this.user.error = '请输入密码信息';
             return false;
         }
 
         if(!this.user.code || (this.user.code != this.verificationCode)) {
+            this.user.error = '请输入验证码或者验证码输入有误';
             return false;
         }
 

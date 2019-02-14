@@ -46,3 +46,8 @@
 .operation-box>button {
     width: 100%;
 }
+
+.error-box>span {
+    font-size: 12px;
+    color: red;
+}

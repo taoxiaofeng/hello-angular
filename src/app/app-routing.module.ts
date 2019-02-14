@@ -32,7 +32,12 @@ const routes: Routes = [{
     path:'login',
     canActivate: [AuthGuard],
     loadChildren: './login/login.module#LoginModule'
-}
+},
+{
+    path: 'assembly',
+    canActivate: [AuthGuard],
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+},
 // {
 //     path: 'dashboard',
 //     canActivate: [AuthGuard],

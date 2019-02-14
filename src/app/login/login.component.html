@@ -20,6 +20,9 @@
                     <span (click)="changeCode()">换一张</span>
                 </div>
             </div>
+            <div class="error-box" *ngIf="!checkUserInfo()">
+                <span>{{user.error}}</span>
+            </div>
         </div>
         <div class="operation-box">
             <button type="button" class="btn btn-primary" (click)="login()">登 录</button>
