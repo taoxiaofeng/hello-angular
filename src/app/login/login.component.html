@@ -1,13 +1,28 @@
 <div class="login">
     <div class="login-box">
-        <div>
-            <span>登录</span>
+        <div class="form-group center">
+            <h1>登录</h1>
         </div>
-        <div>
-            <input type="text">
+        <div class="login-info">
+            <div class="form-group">
+                <label for="">用户名：</label>
+                <input type="text" class="form-control" [(ngModel)]="user.userName" placeholder="请输入账号">
+            </div>
+            <div class="form-group">
+                <label for="">密码：</label>
+                <input type="password" class="form-control" [(ngModel)]="user.password" placeholder="请输入密码">
+            </div>
+            <div class="form-group">
+                <label for="">验证码：</label>
+                <div class="code-box">
+                    <input type="text" class="form-control" placeholder="请输入验证码" [(ngModel)]="user.code">
+                    <canvas id="canvas" width="110" height="34"></canvas>
+                    <span (click)="changeCode()">换一张</span>
+                </div>
+            </div>
         </div>
-        <div>
-            <input type="text">
+        <div class="operation-box">
+            <button type="button" class="btn btn-primary" (click)="login()">登 录</button>
         </div>
     </div>
 </div>
