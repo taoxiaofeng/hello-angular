@@ -1,5 +1,59 @@
 .mat-drawer-inner-container {
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  width: 260px;
+  background-color: #fafafa;
+  box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+
+.sub-menu {
+  min-height: 35px;
+  line-height: 35px;
+  border: none;
+  background-color: transparent;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu-name:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.sub-menu-name {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.sub-menu-name > span {
+  padding-left: 5px;
+}
+
+.mat-container {
+  left: -260px;
+  box-shadow: none;
+  visibility: hidden;
+}
+
+.icon-arrows-right,
+.icon-arrows-down {
+  margin: auto 15px;
+}
+
+.open {
+  transform: scale(1) rotate(90deg);
+}
+
+.three-menu {
+  padding-left: 40px;
+}
+
+.three-menu:hover {
+  background-color: rgb(219, 219, 219);
 }

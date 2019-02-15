@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'my-toolbar',
@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class MyToolbarComponent implements OnInit {
     private host = window.location.href;
     private angularLogoImg='../../../assets/images/logo-nav@2x.png';
+    @Input() matSidenavStatus:boolean = true;
+    @Output() exportMatSidenavStatus = new EventEmitter();
     constructor() { }
 
     ngOnInit() { }
+
+    sidenavStatus() {
+        !this.matSidenavStatus ?  this.matSidenavStatus = true : this.matSidenavStatus = false;
+        this.exportMatSidenavStatus.emit(this.matSidenavStatus);
+    }
 }

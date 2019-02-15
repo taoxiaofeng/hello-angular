@@ -5,9 +5,14 @@ import { MatSidenavComponent } from './mat-sidenav.component';
 
 
 @NgModule({
-    declarations: [],
     imports: [
         CommonModule,
+        FormsModule
+    ],
+    exports: [
+        MatSidenavComponent
+    ],
+    declarations: [
         MatSidenavComponent
     ]
 })

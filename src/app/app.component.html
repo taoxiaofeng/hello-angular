@@ -1,23 +1,22 @@
 <div>
-  <div>
-    <my-toolbar></my-toolbar>
-  </div>
-  <div class="my-menu">
-    <nav>
-      <!-- <a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
-      <a routerLink="/hero" routerLinkActive="active">HEROES</a>
-      <a routerLink="/dynamic" routerLinkActive="active">DYNAMIC</a>
-      <a routerLink="/router-demo" routerLinkActive="active">ROUTERDEMO</a> -->
-      <ng-container *ngFor="let menu of menus">
-        <a routerLink="{{menu.url}}" routerLinkActive="active">{{menu.name}}</a>
-      </ng-container>
-    </nav>
-    <!-- <aio-top-menu></aio-top-menu> -->
-  </div>
-  <div class="my-content">
-    <router-outlet></router-outlet>
-  </div>
-  <!-- <div>
+    <my-toolbar (exportMatSidenavStatus)="getMatSidenavStatus($event)"></my-toolbar>
+    <mat-sidenav [matSidenavStatus]="matSidenavStatus" [menus]="menus"></mat-sidenav>
+    <div class="my-menu">
+        <nav>
+            <!-- <a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
+            <a routerLink="/hero" routerLinkActive="active">HEROES</a>
+            <a routerLink="/dynamic" routerLinkActive="active">DYNAMIC</a>
+            <a routerLink="/router-demo" routerLinkActive="active">ROUTERDEMO</a> -->
+            <ng-container *ngFor="let menu of menus">
+                <a routerLink="{{ menu.url }}" routerLinkActive="active">{{menu.name}}</a>
+            </ng-container>
+        </nav>
+        <!-- <aio-top-menu></aio-top-menu> -->
+    </div>
+    <div class="my-content">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- <div>
     <app-add-banner [ads]="ads"></app-add-banner>
   </div> -->
 </div>

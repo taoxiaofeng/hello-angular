@@ -20,6 +20,7 @@ import { HomeComponent } from './home.component';
 //首页用的组件
 import { MyToolbarModule } from './common/my-toolbar/my-toolbar.module';
 import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
+import { MatSidenavModule } from './common/mat-sidenav/mat-sidenav.module';
 
 //动态组件相关
 import { AdBannerModule } from './add-banner/ad-banner.module';
@@ -47,7 +48,8 @@ import { HeroProfileComponent } from './add-banner/hero-profile.component';
         AppRoutingModule,
         MyToolbarModule,
         AioTopMenuModule,
-        AdBannerModule
+        AdBannerModule,
+        MatSidenavModule
     ],
     exports:[
         AppRoutingModule

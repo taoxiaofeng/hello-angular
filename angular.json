@@ -18,7 +18,7 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              "src/assets/font",
+              "src/font",
               "src/favicon.ico"
             ],
             "styles": [
@@ -78,9 +78,9 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "assets": [
+            "assets": [             
               "src/assets",
-              "src/assets/font",
+              "src/font",
               "src/favicon.ico"
             ]
           }
