@@ -16,7 +16,7 @@ export class MenuService {
             iconSrc: "",
             type: [],
             name: "组件",
-            url: "/component-demo",
+            url: "/main",
             children: [
                 {
                     id: 1001,
@@ -54,7 +54,29 @@ export class MenuService {
                     type: [],
                     name: "测试组件二",
                     url: "/component-demo/two",
-                    children: []
+                    children: [
+                        {
+                            id: 100201,
+                            iconSrc: "",
+                            type: [],
+                            name: "测试二子集一",
+                            url: "/component-demo/one/1"
+                        },
+                        {
+                            id: 100202,
+                            iconSrc: "",
+                            type: [],
+                            name: "测试二子集二",
+                            url: "/component-demo/one/2"
+                        },
+                        {
+                            id: 100203,
+                            iconSrc: "",
+                            type: [],
+                            name: "测试二子集三",
+                            url: "/component-demo/one/3"
+                        }
+                    ]
                 },
                 {
                     id: 1003,

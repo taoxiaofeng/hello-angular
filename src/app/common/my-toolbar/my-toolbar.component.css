@@ -53,7 +53,7 @@
 }
 
 .mat-icon {
-  width: 88px;
+  width: 66px;
   height: 64px;
   text-align: center;
   line-height: 80px;
@@ -104,4 +104,28 @@
   transform: scale(0, 0);
   opacity: .3;
   transition: 0s;
+}
+
+nav > a {
+  color: #ffffff;
+  padding: 10px;
+  margin: 0 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* nav>a:visited,
+a:link {
+  color: #607D8B;
+} */
+
+nav > a:hover {
+  color: #039be5;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav > a.active {
+  color: #039be5;
+  background-color: rgba(0, 0, 0, 0.3);
 }

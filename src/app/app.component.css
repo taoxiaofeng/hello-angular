@@ -1,3 +1,7 @@
+.app-container {
+    display: flex;
+    flex: 1 1 0;
+}
 h1 {
   font-size: 1.2em;
   color: #999;
@@ -10,39 +14,12 @@ h2 {
   padding-top: 0;
 }
 
-nav>a {
-  color: #FFFFFF;
-  padding: 10px;
-  margin: 0 10px;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 4px;
-}
-
-/* nav>a:visited,
-a:link {
-  color: #607D8B;
-} */
-
-nav>a:hover {
-  color: #039be5;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-nav>a.active {
-  color: #039be5;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.my-menu {
-  position: fixed;
-  top: 14px;
-  left: 280px;
-  z-index: 10;
-  min-width: 800px;
-}
-
 .my-content {
-  min-width: 1080px;
-  margin-top: 80px;
+    position: fixed;
+    left: 0;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex: 1 1 0;
 }

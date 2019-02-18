@@ -34,9 +34,9 @@ const routes: Routes = [{
     loadChildren: './login/login.module#LoginModule'
 },
 {
-    path: 'assembly',
+    path: 'main',
     canActivate: [AuthGuard],
-    loadChildren: './dashboard/dashboard.module#DashboardModule'
+    loadChildren: './main/main.module#MainModule'
 },
 // {
 //     path: 'dashboard',

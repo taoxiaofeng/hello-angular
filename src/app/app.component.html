@@ -1,19 +1,8 @@
-<div>
-    <my-toolbar (exportMatSidenavStatus)="getMatSidenavStatus($event)"></my-toolbar>
-    <mat-sidenav [matSidenavStatus]="matSidenavStatus" [menus]="menus"></mat-sidenav>
-    <div class="my-menu">
-        <nav>
-            <!-- <a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
-            <a routerLink="/hero" routerLinkActive="active">HEROES</a>
-            <a routerLink="/dynamic" routerLinkActive="active">DYNAMIC</a>
-            <a routerLink="/router-demo" routerLinkActive="active">ROUTERDEMO</a> -->
-            <ng-container *ngFor="let menu of menus">
-                <a routerLink="{{ menu.url }}" routerLinkActive="active">{{menu.name}}</a>
-            </ng-container>
-        </nav>
-        <!-- <aio-top-menu></aio-top-menu> -->
-    </div>
+<div class="app-container">
+    <my-toolbar [menus]="menus" (exportMatSidenavStatus)="getMatSidenavStatus($event)"></my-toolbar>
+    <!-- <aio-top-menu></aio-top-menu> -->
     <div class="my-content">
+        <mat-sidenav [matSidenavStatus]="matSidenavStatus" [menus]="menus" [style.display]="'flex'"></mat-sidenav>
         <router-outlet></router-outlet>
     </div>
     <!-- <div>
