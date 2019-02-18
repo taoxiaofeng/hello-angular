@@ -17,18 +17,23 @@
   flex-direction: column;
 }
 
-.sub-menu-name:hover {
+.sub-menu-box:hover {
   background-color: rgb(219, 219, 219);
 }
 
-.sub-menu-name {
+.sub-menu-box {
   display: flex;
-  justify-content: space-between;
-  padding-left: 20px;
 }
 
-.sub-menu-name > span {
-  padding-left: 5px;
+.sub-menu-box > span {
+    width: 66px;
+    text-align: center;
+}
+
+.sub-menu-name {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: space-between;
 }
 
 .mat-container {
@@ -52,4 +57,8 @@
 
 .three-menu:hover {
   background-color: rgb(219, 219, 219);
+}
+
+.icon-user {
+  line-height: 35px;
 }
