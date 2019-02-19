@@ -35,7 +35,7 @@
 .sub-menu-name {
   height: 35px;
   width: 154px;
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
 }
 
@@ -60,9 +60,9 @@
   margin: auto 15px;
 }
 
-/* .open {
+.open {
   transform: scale(1) rotate(90deg);
-} */
+}
 
 .three-menu {
   padding-left: 86px;

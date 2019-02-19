@@ -1,14 +1,14 @@
 <div class="mat-drawer-inner-container" [class.mat-container]="!matSidenavStatus">
     <ng-container *ngFor="let menu of menus">
-        <div *ngFor="let subMenu of menu.children" class="sub-menu" (click)="extendedMenus(subMenu, menuArrows)">
+        <div *ngFor="let subMenu of menu.children" class="sub-menu" (click)="extendedMenus(subMenu)">
             <div class="sub-menu-box">
                 <span class="icon-user"></span>
                 <div class="sub-menu-name">
                     <span class="menu-name">{{subMenu.name}}</span>
-                    <span #menuArrows class="icon-arrows-right"></span>
+                    <span class="icon-arrows-right" [class.open]="selectMenu == subMenu"></span>
                 </div>
             </div>
-            <ng-container *ngIf="selectMenu == subMenu">
+            <ng-container *ngIf="selectMenu == subMenu && matSidenavStatus">
                 <div class="three-menu" *ngFor="let threeMenu of subMenu.children" (click)="$event.stopPropagation();">
                     <span>{{threeMenu.name}}</span>
                 </div>
