@@ -15,7 +15,7 @@ export class MenuService {
             id: 1,
             iconSrc: "",
             type: [],
-            name: "组件",
+            name: "一级菜单一",
             url: "/main",
             children: [
                 {
@@ -100,7 +100,7 @@ export class MenuService {
             id: 2,
             iconSrc: "",
             type: [],
-            name: "案例2",
+            name: "一级菜单二",
             url: "demo2",
             children: []
         },
@@ -108,7 +108,7 @@ export class MenuService {
             id: 3,
             iconSrc: "",
             type: [],
-            name: "案例3",
+            name: "一级菜单三",
             url: "demo3",
             children: []
         },
@@ -116,7 +116,7 @@ export class MenuService {
             id: 4,
             iconSrc: "",
             type: [],
-            name: "案例4",
+            name: "一级菜单四",
             url: "demo4",
             children: []
         }

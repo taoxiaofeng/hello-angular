@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'my-home',
     template:`
-    <h1 class="welcome">欢迎使用</h1>
+    <span class="welcome">知识点一二三四五六七八九十</span>
     <div class="welcome-img">
         
     </div>

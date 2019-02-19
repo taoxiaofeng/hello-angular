@@ -1,6 +1,6 @@
 .app-container {
-    display: flex;
-    flex: 1 1 0;
+  display: flex;
+  flex: 1 1 0;
 }
 h1 {
   font-size: 1.2em;
@@ -15,11 +15,11 @@ h2 {
 }
 
 .my-content {
-    position: fixed;
-    left: 0;
-    top: 64px;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex: 1 1 0;
+  position: fixed;
+  left: 0;
+  top: 64px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex: 1 1 0;
 }

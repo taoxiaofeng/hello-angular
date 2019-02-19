@@ -28,6 +28,21 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
+.project-name {
+  width: 155px;
+}
+
+.project-name a{
+  text-decoration: none;
+}
+
+.project-name h1 {
+  font-size: 20px;
+  color: #FFF;
+  padding: 10px;
+  margin: 0 auto;
+}
+
 .hamburger .mat-button {
   height: 100%;
   margin: 0;

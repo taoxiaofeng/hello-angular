@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from "@angular/core";
+import { Component, OnInit, Input, Output, ElementRef } from "@angular/core";
 
 @Component({
     selector: "mat-sidenav",
@@ -23,12 +23,15 @@ export class MatSidenavComponent implements OnInit {
     // }
 
     //展开菜单
-    extendedMenus(menu: any) {
+    extendedMenus(menu: any,extendedMenus:ElementRef) {
         // this.menuUnfold  = !this.menuUnfold;
         if (!this.selectMenu || (this.selectMenu && this.selectMenu.name != menu.name)) {
             this.selectMenu = menu;
+            extendedMenus['className'] = 'icon-arrows-down';
         } else {
             this.selectMenu = {};
+            extendedMenus['className'] = 'icon-arrows-right';
         }
+        console.log(this.selectMenu);
     }
 }

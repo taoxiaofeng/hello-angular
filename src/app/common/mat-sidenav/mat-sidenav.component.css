@@ -1,10 +1,11 @@
 .mat-drawer-inner-container {
   padding: 0;
-  width: 260px;
+  width: 220px;
   background-color: #fafafa;
   box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
   visibility: visible;
   transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
 }
 
 .sub-menu {
@@ -26,18 +27,30 @@
 }
 
 .sub-menu-box > span {
-    width: 66px;
-    text-align: center;
+  width: 66px;
+  min-width: 66px;
+  text-align: center;
 }
 
 .sub-menu-name {
-    display: flex;
-    flex: 1 1 0;
-    justify-content: space-between;
+  height: 35px;
+  width: 154px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.sub-menu-name .menu-name {
+  width: 106px;
+  display: inline-block;
 }
 
 .mat-container {
-  margin-left: -260px;
+  width: 66px;
+  /* box-shadow: none;
+  visibility: hidden; */
+}
+
+.close {
   box-shadow: none;
   visibility: hidden;
 }
@@ -47,12 +60,13 @@
   margin: auto 15px;
 }
 
-.open {
+/* .open {
   transform: scale(1) rotate(90deg);
-}
+} */
 
 .three-menu {
-  padding-left: 40px;
+  padding-left: 86px;
+  white-space: nowrap;
 }
 
 .three-menu:hover {
