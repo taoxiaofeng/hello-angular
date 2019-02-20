@@ -1,6 +1,7 @@
 .mat-drawer-inner-container {
   padding: 0;
-  width: 220px;
+  width: 250px;
+  font-size: 12px;
   background-color: #fafafa;
   box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
   visibility: visible;

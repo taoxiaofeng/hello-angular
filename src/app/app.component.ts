@@ -14,6 +14,7 @@ export class AppComponent {
     ads: AdItem[];
     menus: any[] = [];
     matSidenavStatus: boolean = true;
+    selectMenu:any;
 
     constructor(
         private adService: AdService,
@@ -27,6 +28,7 @@ export class AppComponent {
         // this.ads = this.adService.getAds();
         // this.changeDetectorRef.detectChanges();
         this.menus = this.menuService.menus;
+        this.selectMenu = this.menus[0];
         this.router.navigate(['/cmp/general/button']);
         console.log(this.menus);
     }
@@ -35,5 +37,10 @@ export class AppComponent {
     getMatSidenavStatus($event:boolean) {
         console.log($event);
         this.matSidenavStatus = $event;
+    }
+
+    //获取选择的一级菜单
+    getMenu($event:any) {
+        this.selectMenu = JSON.parse(JSON.stringify($event));
     }
 }

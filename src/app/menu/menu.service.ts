@@ -1,16 +1,9 @@
 import { Injectable } from "@angular/core";
-export class Menu {
-    id: number;
-    iconSrc: string;
-    type: string[];
-    name: string;
-    url: string;
-    children: any[] = [];
-}
+import { Menus } from "./menu";
 
 @Injectable()
 export class MenuService {
-    public menus: Menu[] = [
+    public menus: Menus[] = [
         {
             id: 1,
             iconSrc: "",
@@ -29,22 +22,15 @@ export class MenuService {
                             id: 100101,
                             iconSrc: "",
                             type: [],
-                            name: "Button",
+                            name: "Button 按钮",
                             url: "/cmp/general/button"
                         },
                         {
                             id: 100102,
                             iconSrc: "",
                             type: [],
-                            name: "Icon",
+                            name: "Icon 图标",
                             url: "/cmp/general/icon"
-                        },
-                        {
-                            id: 100103,
-                            iconSrc: "",
-                            type: [],
-                            name: "测试一子集三",
-                            url: "/main/one/3"
                         }
                     ]
                 },
@@ -52,29 +38,22 @@ export class MenuService {
                     id: 1002,
                     iconSrc: "",
                     type: [],
-                    name: "测试组件二",
-                    url: "/component-demo/two",
+                    name: "Layout",
+                    url: "/layout",
                     children: [
                         {
                             id: 100201,
                             iconSrc: "",
                             type: [],
-                            name: "测试二子集一",
-                            url: "/component-demo/one/1"
+                            name: "Grid 栅格",
+                            url: "/layout/grid"
                         },
                         {
                             id: 100202,
                             iconSrc: "",
                             type: [],
-                            name: "测试二子集二",
-                            url: "/component-demo/one/2"
-                        },
-                        {
-                            id: 100203,
-                            iconSrc: "",
-                            type: [],
-                            name: "测试二子集三",
-                            url: "/component-demo/one/3"
+                            name: "Layout 布局",
+                            url: "/layout/layout"
                         }
                     ]
                 },
@@ -82,17 +61,155 @@ export class MenuService {
                     id: 1003,
                     iconSrc: "",
                     type: [],
-                    name: "测试组件三",
-                    url: "/component-demo/three",
-                    children: []
+                    name: "Navigation",
+                    url: "/navigation",
+                    children: [{
+                        id: 100301,
+                        iconSrc: "",
+                        type: [],
+                        name: "Affix 固钉",
+                        url: "/navigation/affix",
+                    },{
+                        id: 100302,
+                        iconSrc: "",
+                        type: [],
+                        name: "Breadcrumb 面包屑",
+                        url: "/navigation/breadcrumb",
+                    },{
+                        id: 100303,
+                        iconSrc: "",
+                        type: [],
+                        name: "Dropdown 下拉菜单",
+                        url: "/navigation/Dropdown",
+                    },{
+                        id: 100304,
+                        iconSrc: "",
+                        type: [],
+                        name: "Menu 导航菜单",
+                        url: "/navigation/menu",
+                    },{
+                        id: 100305,
+                        iconSrc: "",
+                        type: [],
+                        name: "Pagination 分页",
+                        url: "/navigation/pagination",
+                    },{
+                        id: 100306,
+                        iconSrc: "",
+                        type: [],
+                        name: "Steps 步骤条",
+                        url: "/navigation/steps",
+                    },]
                 },
                 {
                     id: 1004,
                     iconSrc: "",
                     type: [],
-                    name: "测试组件四",
-                    url: "/component-demo/four",
-                    children: []
+                    name: "Data Entry",
+                    url: "/data-entry",
+                    children: [{
+                        id: 100401,
+                        iconSrc: "",
+                        type: [],
+                        name: "Autocomplete 自动完成",
+                        url: "/data-entry/autocomplete",
+                    },{
+                        id: 100402,
+                        iconSrc: "",
+                        type: [],
+                        name: "Cascader 级联选择",
+                        url: "/data-entry/cascader",
+                    },{
+                        id: 100403,
+                        iconSrc: "",
+                        type: [],
+                        name: "Checkbox 多选框",
+                        url: "/data-entry/checkbox",
+                    },{
+                        id: 100404,
+                        iconSrc: "",
+                        type: [],
+                        name: "DatePicker 日期选择框",
+                        url: "/data-entry/date-picker",
+                    },{
+                        id: 100405,
+                        iconSrc: "",
+                        type: [],
+                        name: "Form 表单",
+                        url: "/data-entry/form",
+                    },{
+                        id: 100406,
+                        iconSrc: "",
+                        type: [],
+                        name: "Input 输入框",
+                        url: "/data-entry/input",
+                    },{
+                        id: 100407,
+                        iconSrc: "",
+                        type: [],
+                        name: "InputNumber 数字输入框",
+                        url: "/data-entry/input-number",
+                    },{
+                        id: 100408,
+                        iconSrc: "",
+                        type: [],
+                        name: "Mention 提及",
+                        url: "/data-entry/mention",
+                    },{
+                        id: 100409,
+                        iconSrc: "",
+                        type: [],
+                        name: "Radio 单选框",
+                        url: "/data-entry/radio",
+                    },{
+                        id: 1004010,
+                        iconSrc: "",
+                        type: [],
+                        name: "Rate 评分",
+                        url: "/data-entry/rate",
+                    },{
+                        id: 1004011,
+                        iconSrc: "",
+                        type: [],
+                        name: "Select 选择器",
+                        url: "/data-entry/select",
+                    },{
+                        id: 1004012,
+                        iconSrc: "",
+                        type: [],
+                        name: "Slider 滑动输入条",
+                        url: "/data-entry/slider",
+                    },{
+                        id: 1004013,
+                        iconSrc: "",
+                        type: [],
+                        name: "Switch 开关",
+                        url: "/data-entry/switch",
+                    },{
+                        id: 1004014,
+                        iconSrc: "",
+                        type: [],
+                        name: "TimePicker 时间选择框",
+                        url: "/data-entry/autocomplete",
+                    },{
+                        id: 1004015,
+                        iconSrc: "",
+                        type: [],
+                        name: "Transfer 穿梭框",
+                        url: "/data-entry/transfer",
+                    },{
+                        id: 1004016,
+                        iconSrc: "",
+                        type: [],
+                        name: "TreeSelect 树选择",
+                        url: "/data-entry/tree-select",
+                    },{
+                        id: 1004017,
+                        iconSrc: "",
+                        type: [],
+                        name: "Upload 上传",
+                        url: "/data-entry/upload",
+                    },]
                 }
             ]
         },
@@ -101,7 +218,7 @@ export class MenuService {
             iconSrc: "",
             type: [],
             name: "一级菜单二",
-            url: "demo2",
+            url: "/cmp",
             children: []
         },
         {
@@ -109,7 +226,7 @@ export class MenuService {
             iconSrc: "",
             type: [],
             name: "一级菜单三",
-            url: "demo3",
+            url: "/cmp",
             children: []
         },
         {
@@ -117,7 +234,7 @@ export class MenuService {
             iconSrc: "",
             type: [],
             name: "一级菜单四",
-            url: "demo4",
+            url: "/cmp",
             children: []
         }
     ];

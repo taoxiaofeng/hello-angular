@@ -5,11 +5,11 @@
                 <span class="icon-user" [style.font-size]="!matSidenavStatus ? '16px' : '14px'"></span>
                 <div class="sub-menu-name">
                     <span class="menu-name">{{subMenu.name}}</span>
-                    <span class="icon-arrows-right" [class.open]="selectSubMenu == subMenu"></span>
+                    <span class="icon-arrows-right" [class.open]="selectSubMenu?.name == subMenu?.name"></span>
                 </div>
             </div>
-            <ng-container *ngIf="selectSubMenu == subMenu && matSidenavStatus">
-                <div class="three-menu" *ngFor="let threeMenu of subMenu.children" [class.selected]="selectThreeMenu == threeMenu" (click)="checkedMenus('threeMenu',threeMenu);$event.stopPropagation();">
+            <ng-container *ngIf="selectSubMenu?.name == subMenu?.name">
+                <div class="three-menu" *ngFor="let threeMenu of subMenu.children" [class.selected]="selectThreeMenu?.name == threeMenu?.name" (click)="checkedMenus('threeMenu',threeMenu);$event.stopPropagation();">
                     <span>{{threeMenu.name}}</span>
                 </div>
             </ng-container>
