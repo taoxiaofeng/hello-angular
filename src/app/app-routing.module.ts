@@ -34,9 +34,9 @@ const routes: Routes = [{
     loadChildren: './login/login.module#LoginModule'
 },
 {
-    path: 'main',
+    path: 'cmp',
     canActivate: [AuthGuard],
-    loadChildren: './main/main.module#MainModule'
+    loadChildren: './components/components.module#ComponentsModule'
 },
 // {
 //     path: 'dashboard',

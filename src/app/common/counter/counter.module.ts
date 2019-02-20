@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MainComponent } from './main.component';
-import { MainRoutingModule } from './main-routing.module';
+import { CounterComponent } from './counter.component';
 
 @NgModule({
     declarations: [
-        MainComponent
+        CounterComponent
     ],
     imports: [
         CommonModule,
-        FormsModule,
-        MainRoutingModule
+        FormsModule
+    ],
+    exports:[
+        CounterComponent
     ]
 })
-export class MainModule { }
+export class CounterModule { }

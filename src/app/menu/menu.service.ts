@@ -15,36 +15,36 @@ export class MenuService {
             id: 1,
             iconSrc: "",
             type: [],
-            name: "一级菜单一",
-            url: "/main",
+            name: "Components",
+            url: "/cmp",
             children: [
                 {
                     id: 1001,
                     iconSrc: "",
                     type: [],
-                    name: "测试组件一",
-                    url: "/component-demo/one",
+                    name: "General",
+                    url: "/cmp/general",
                     children: [
                         {
                             id: 100101,
                             iconSrc: "",
                             type: [],
-                            name: "测试一子集一",
-                            url: "/component-demo/one/1"
+                            name: "Button",
+                            url: "/cmp/general/button"
                         },
                         {
                             id: 100102,
                             iconSrc: "",
                             type: [],
-                            name: "测试一子集二",
-                            url: "/component-demo/one/2"
+                            name: "Icon",
+                            url: "/cmp/general/icon"
                         },
                         {
                             id: 100103,
                             iconSrc: "",
                             type: [],
                             name: "测试一子集三",
-                            url: "/component-demo/one/3"
+                            url: "/main/one/3"
                         }
                     ]
                 },

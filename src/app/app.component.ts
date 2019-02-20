@@ -2,6 +2,7 @@ import { Component, ChangeDetectorRef } from "@angular/core";
 import { AdService } from "./add-banner/ad.service";
 import { AdItem } from "./add-banner/ad-item";
 import { MenuService } from "./menu/menu.service";
+import { ActivatedRoute, Router } from "@angular/router";
 @Component({
     selector: "my-app",
     templateUrl: "./app.component.html",
@@ -17,15 +18,16 @@ export class AppComponent {
     constructor(
         private adService: AdService,
         private changeDetectorRef: ChangeDetectorRef,
-        private menuService: MenuService
+        private menuService: MenuService,
+        private router: Router
     ) { }
 
     ngOnInit() {
         // this.changeDetectorRef.markForCheck();
         // this.ads = this.adService.getAds();
         // this.changeDetectorRef.detectChanges();
-
         this.menus = this.menuService.menus;
+        this.router.navigate(['/cmp/general/button']);
         console.log(this.menus);
     }
 

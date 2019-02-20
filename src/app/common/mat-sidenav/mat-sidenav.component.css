@@ -18,8 +18,15 @@
   flex-direction: column;
 }
 
-.sub-menu-box:hover {
-  background-color: rgb(219, 219, 219);
+.sub-menu-box:hover,
+.three-menu:hover {
+  background-color: #e6f7ff;
+  border-right: 3px solid #1890ff;
+}
+
+.selected {
+  background-color: #e6f7ff;
+  border-right: 3px solid #1890ff;
 }
 
 .sub-menu-box {
@@ -67,10 +74,6 @@
 .three-menu {
   padding-left: 86px;
   white-space: nowrap;
-}
-
-.three-menu:hover {
-  background-color: rgb(219, 219, 219);
 }
 
 .icon-user {
