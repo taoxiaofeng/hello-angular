@@ -39,21 +39,21 @@ export class MenuService {
                     iconSrc: "",
                     type: [],
                     name: "Layout",
-                    url: "/layout",
+                    url: "/cmp/layout",
                     children: [
                         {
                             id: 100201,
                             iconSrc: "",
                             type: [],
                             name: "Grid 栅格",
-                            url: "/layout/grid"
+                            url: "/cmp/layout/grid"
                         },
                         {
                             id: 100202,
                             iconSrc: "",
                             type: [],
                             name: "Layout 布局",
-                            url: "/layout/layout"
+                            url: "/cmp/layout/layout"
                         }
                     ]
                 },
@@ -62,43 +62,43 @@ export class MenuService {
                     iconSrc: "",
                     type: [],
                     name: "Navigation",
-                    url: "/navigation",
+                    url: "/cmp/navigation",
                     children: [{
                         id: 100301,
                         iconSrc: "",
                         type: [],
                         name: "Affix 固钉",
-                        url: "/navigation/affix",
+                        url: "/cmp/navigation/affix",
                     },{
                         id: 100302,
                         iconSrc: "",
                         type: [],
                         name: "Breadcrumb 面包屑",
-                        url: "/navigation/breadcrumb",
+                        url: "/cmp/navigation/breadcrumb",
                     },{
                         id: 100303,
                         iconSrc: "",
                         type: [],
                         name: "Dropdown 下拉菜单",
-                        url: "/navigation/Dropdown",
+                        url: "/cmp/navigation/Dropdown",
                     },{
                         id: 100304,
                         iconSrc: "",
                         type: [],
                         name: "Menu 导航菜单",
-                        url: "/navigation/menu",
+                        url: "/cmp/navigation/menu",
                     },{
                         id: 100305,
                         iconSrc: "",
                         type: [],
                         name: "Pagination 分页",
-                        url: "/navigation/pagination",
+                        url: "/cmp/navigation/pagination",
                     },{
                         id: 100306,
                         iconSrc: "",
                         type: [],
                         name: "Steps 步骤条",
-                        url: "/navigation/steps",
+                        url: "/cmp/navigation/steps",
                     },]
                 },
                 {
