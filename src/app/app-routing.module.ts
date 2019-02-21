@@ -38,6 +38,11 @@ const routes: Routes = [{
     canActivate: [AuthGuard],
     loadChildren: './components/components.module#ComponentsModule'
 },
+{
+    path: 'slide-show',
+    canActivate: [AuthGuard],
+    loadChildren: './slide-show/slide-show.module#SlideShowModule'
+},
 // {
 //     path: 'dashboard',
 //     canActivate: [AuthGuard],

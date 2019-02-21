@@ -10,7 +10,7 @@ import { Menus } from "../../menu/menu";
 export class MatSidenavComponent implements OnInit {
     @Input() matSidenavStatus: boolean = true;
     @Input() menus: Menus;
-    @Input() selectMenu: any;
+    @Input() selectMenu: Menus;
     // public menuUnfold:boolean = false;
     public selectSubMenu: any;
     public selectThreeMenu: any;
@@ -21,7 +21,7 @@ export class MatSidenavComponent implements OnInit {
         //Add '${implements OnChanges}' to the class.
         console.log("chanages", changes);
         if (changes.selectMenu && changes.selectMenu.currentValue) {
-            let curValue = changes.selectMenu.currentValue.children;
+            let curValue = changes.selectMenu.currentValue;
             if (curValue.children && curValue.children.length > 0) {
                 // this.selectSubMenu = changes.selectMenu.currentValue.children[0];
                 this.checkedMenus(
@@ -45,7 +45,6 @@ export class MatSidenavComponent implements OnInit {
         if (!menu) {
             return;
         }
-        console.log(menu);
         switch (hierarchy) {
             case "subMenu":
                 if (
@@ -59,10 +58,10 @@ export class MatSidenavComponent implements OnInit {
                 break;
             case "threeMenu":
                 this.selectThreeMenu = menu;
-                this.router.navigate([menu.url]);
                 break;
             default:
                 break;
         }
+        this.router.navigate([menu.url]);
     }
 }

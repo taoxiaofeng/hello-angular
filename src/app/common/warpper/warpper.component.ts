@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-warpper',
+  selector: 'warpper',
   templateUrl: './warpper.component.html',
   styleUrls: ['./warpper.component.css']
 })

@@ -1,0 +1,10 @@
+<p>
+  ng-content works!
+</p>
+<warpper>
+  <span>this is not a counter</span>
+  <!-- ng-container 容器不再匹配 select="counter"  解决这个问题，我们必须使用 ngProjectAs 属性-->
+  <ng-container ngProjectAs="counter">
+      <counter></counter>
+  </ng-container>
+</warpper>

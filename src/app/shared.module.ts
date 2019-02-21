@@ -7,6 +7,8 @@ import { NgbModule, NgbDatepickerI18n } from '@ng-bootstrap/ng-bootstrap';
 import { HeroSearchModule } from './common/hero-search/hero-search.module';
 import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
 import { HighlightDirectiveModule } from './attribute-directive/highlight.ditective.module';
+import { CounterModule } from './common/counter/counter.module';
+import { WarpperModule } from './common/warpper/warpper.module';
 
 @NgModule({
     imports:[
@@ -17,7 +19,9 @@ import { HighlightDirectiveModule } from './attribute-directive/highlight.ditect
         HeroSearchModule,
         MyToolbarModule,
         AioTopMenuModule,
-        HighlightDirectiveModule
+        HighlightDirectiveModule,
+        CounterModule,
+        WarpperModule
     ],
     exports:[
         NgbModule,
@@ -27,7 +31,9 @@ import { HighlightDirectiveModule } from './attribute-directive/highlight.ditect
         HeroSearchModule,
         MyToolbarModule,
         AioTopMenuModule,
-        HighlightDirectiveModule
+        HighlightDirectiveModule,
+        CounterModule,
+        WarpperModule
     ],
     declarations:[
         

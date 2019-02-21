@@ -217,9 +217,17 @@ export class MenuService {
             id: 2,
             iconSrc: "",
             type: [],
-            name: "一级菜单二",
-            url: "/cmp",
-            children: []
+            name: "功能点演示",
+            url: "/slide-show",
+            children: [
+                {
+                    id: 2001,
+                    iconSrc: "",
+                    type: [],
+                    name: "ng-content",
+                    url: "/slide-show/ng-content", 
+                }
+            ]
         },
         {
             id: 3,

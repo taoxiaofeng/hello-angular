@@ -25,6 +25,6 @@ export class MyToolbarComponent implements OnInit {
     //选择一级菜单
     choose(menu:any) {
         this.selectMenu = menu;
-        this.exportMenu.emit(this.selectMenu);
+        this.exportMenu.emit(menu);
     }
 }
