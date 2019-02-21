@@ -17,7 +17,7 @@
         <a routerLink="/dynamic" routerLinkActive="active">DYNAMIC</a>
         <a routerLink="/router-demo" routerLinkActive="active">ROUTERDEMO</a> -->
         <ng-container *ngFor="let menu of menus">
-            <a routerLink="{{ menu.url }}" [class.active]="selectMenu == menu" (click)="choose(menu);">{{menu.name}}</a>
+            <a routerLink="{{ menu.url }}" [class.active]="selectMenu.name == menu.name" (click)="choose(menu);">{{menu.name}}</a>
         </ng-container>
     </nav>
 </div>
