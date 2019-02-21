@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ContentChild, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'warpper',
-  templateUrl: './warpper.component.html',
-  styleUrls: ['./warpper.component.css']
+    selector: 'warpper',
+    templateUrl: './warpper.component.html',
+    styleUrls: ['./warpper.component.css']
 })
 export class WarpperComponent implements OnInit {
+    show = true;
+    items:any[] = [0, 0, 0];
+    @ContentChild(TemplateRef) template: TemplateRef<any>;
+    constructor() { }
 
-  constructor() { }
+    ngOnInit() {
+    }
 
-  ngOnInit() {
-  }
+    getStatus() {
+        console.log(this.template);
+    }
 
 }
