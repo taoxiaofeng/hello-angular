@@ -1,13 +1,28 @@
 <p>
     ng-content works!
 </p>
-<warpper>
+<!-- <warpper> -->
     <!-- <span>this is not a counter</span> -->
     <!-- ng-container 容器不再匹配 select="counter"  解决这个问题，我们必须使用 ngProjectAs 属性-->
     <!-- <ng-container ngProjectAs="counter">
         <counter></counter>
     </ng-container> -->
-    <ng-template>
+    <!-- <ng-template>
         <counter></counter>
-    </ng-template>
-</warpper>
+    </ng-template> -->
+<!-- </warpper> -->
+<!-- 演示内容投影  ng-content -->
+<!-- <app-greet>
+    <header>Card Header</header>
+    <div class="card_body">Card Body</div>
+    <footer>Card Footer</footer>
+</app-greet> -->
+<!-- @ContentChild 示例 -->
+<!-- <app-parent>
+    <app-child></app-child>
+</app-parent> -->
+<!-- @ContentChildren 示例 -->
+<app-parent>
+    <app-child></app-child>
+    <app-child></app-child>
+</app-parent>

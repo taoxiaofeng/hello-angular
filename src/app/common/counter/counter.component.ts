@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 let instances = 0;
 @Component({
   selector: 'counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+  template: `<h1>{{id}}</h1>`,
+  styles:[ ``]
 })
 export class CounterComponent implements OnInit {
   id:number;

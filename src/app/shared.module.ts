@@ -9,6 +9,9 @@ import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
 import { HighlightDirectiveModule } from './attribute-directive/highlight.ditective.module';
 import { CounterModule } from './common/counter/counter.module';
 import { WarpperModule } from './common/warpper/warpper.module';
+import { GreetModule } from './common/greet/greet.module';
+import { ChildModule } from './common/child/child.module';
+import { ParentModule } from './common/parent/parent.module';
 
 @NgModule({
     imports:[
@@ -21,7 +24,10 @@ import { WarpperModule } from './common/warpper/warpper.module';
         AioTopMenuModule,
         HighlightDirectiveModule,
         CounterModule,
-        WarpperModule
+        WarpperModule,
+        GreetModule,
+        ChildModule,
+        ParentModule
     ],
     exports:[
         NgbModule,
@@ -33,7 +39,10 @@ import { WarpperModule } from './common/warpper/warpper.module';
         AioTopMenuModule,
         HighlightDirectiveModule,
         CounterModule,
-        WarpperModule
+        WarpperModule,
+        GreetModule,
+        ChildModule,
+        ParentModule
     ],
     declarations:[
         
