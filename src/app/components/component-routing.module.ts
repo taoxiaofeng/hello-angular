@@ -6,6 +6,7 @@ import { AuthGuard } from "../app-routing.module";
 const routes: Routes = [
     {
         path: '',
+        data: { breadcrumb: 'cmp'},
         children: [
             {
                 path: 'general',
