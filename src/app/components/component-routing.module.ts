@@ -12,12 +12,21 @@ const routes: Routes = [
                 loadChildren: './general/general.module#GeneralModule',
                 data: { preload: true }
             },
-            // {
-            //     path: "general/icon",
-            //     canActivate: [AuthGuard],
-            //     component: IconCmpComponent
-            // }
-
+            {
+                path: 'layout',
+                loadChildren: './layout/layout.module#LayoutModule',
+                data: { preload: true }
+            },
+            {
+                path: "navigation",
+                loadChildren: './navigation/navigation.module#NavigationModule',
+                data: { preload: true }
+            },
+            {
+                path: "data-entry",
+                loadChildren: './data-entry/data-entry.module#DataEntryModule',
+                data: { preload: true }
+            }
         ]
     }
 ];

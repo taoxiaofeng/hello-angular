@@ -12,8 +12,7 @@ const routes: Routes = [{
     path:'icon',
     component:IconCmpComponent,
     canActivate:[AuthGuard]
-}
-];
+}];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
