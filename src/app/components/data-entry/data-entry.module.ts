@@ -24,6 +24,7 @@ import { FormComponent } from './form/form.component';
   imports: [
     CommonModule,
     DataEntryRoutingModule
-  ]
+  ],
+  exports:[AutocompleteComponent, CascaderComponent, CheckboxComponent, DatePickerComponent, InputComponent, InputNumberComponent, MentionComponent, RadioComponent, RateComponent, SelectComponent, SliderComponent, SwitchComponent, TimePickerComponent, TransferComponent, TreeSelectComponent, UploadComponent, FormComponent]
 })
 export class DataEntryModule { }

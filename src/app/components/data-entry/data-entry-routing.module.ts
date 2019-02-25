@@ -20,55 +20,72 @@ import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [{
     path: 'autocomplete',
-    component: AutocompleteComponent
+    component: AutocompleteComponent,
+    data: { breadcrumb: 'autocomplete'}
 },{
     path: 'cascader',
-    component: CascaderComponent 
+    component: CascaderComponent,
+    data: { breadcrumb: 'cascader'} 
 },{
     path: 'checkbox',
-    component: CheckboxComponent
+    component: CheckboxComponent,
+    data: { breadcrumb: 'checkbox'}
 },{
     path: 'date-picker',
-    component: DatePickerComponent
+    component: DatePickerComponent,
+    data: { breadcrumb: 'date-picker'}
 },{
     path: 'form',
-    component: FormComponent
+    component: FormComponent,
+    data: { breadcrumb: 'form'}
 },{
     path: 'input',
-    component: InputComponent
+    component: InputComponent,
+    data: { breadcrumb: 'input'}
 },{
     path: 'input-number',
-    component: InputNumberComponent
+    component: InputNumberComponent,
+    data: { breadcrumb: 'input-number'}
 },{
     path: 'mention',
-    component: MentionComponent
+    component: MentionComponent,
+    data: { breadcrumb: 'mention'}
 },{
     path: 'radio',
-    component: RadioComponent
+    component: RadioComponent,
+    data: { breadcrumb: 'radio'}
 },{
     path: 'rate',
-    component: RateComponent
+    component: RateComponent,
+    data: { breadcrumb: 'rate'}
 },{
     path: 'select',
-    component: SelectComponent
+    component: SelectComponent,
+    data: { breadcrumb: 'select'}
 },{
     path: 'slider',
-    component: SliderComponent
+    component: SliderComponent,
+    data: { breadcrumb: 'slider'}
 },{
     path: 'switch',
-    component: SwitchComponent
+    component: SwitchComponent,
+    data: { breadcrumb: 'switch'}
 },{
     path: 'time-picker',
-    component: TimePickerComponent
+    component: TimePickerComponent,
+    data: { breadcrumb: 'time-picker'}
 },{
     path: 'transfer',
-    component: TransferComponent
+    component: TransferComponent,
+    data: { breadcrumb: 'transfer'}
 },{
     path: 'tree-select',
-    component: TreeSelectComponent
+    component: TreeSelectComponent,
+    data: { breadcrumb: 'tree-select'}
 },{
     path: 'upload',
-    component: UploadComponent
+    component: UploadComponent,
+    data: { breadcrumb: 'upload'}
 }];
 
 @NgModule({

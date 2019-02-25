@@ -30,7 +30,7 @@ export class AppComponent {
         this.menus = this.menuService.menus;
         this.selectMenu = this.menus[0];
         this.router.navigate(['/cmp/general/button']);
-        console.log(this.menus);
+        
     }
 
     //获取 matSidenav 状态

@@ -7,11 +7,11 @@ import { LayoutCmpComponent } from './layout-cmp/layout-cmp.component';
 const routes: Routes = [{ 
     path: 'grid',
     component: GridComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'grid'}
 },{
     path: 'layout-cmp',
     component: LayoutCmpComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'layout-cmp'}
 }];
 
 @NgModule({

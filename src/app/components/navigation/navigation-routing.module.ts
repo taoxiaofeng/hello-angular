@@ -11,27 +11,27 @@ import { StepsComponent } from './steps/steps.component';
  const routes:Routes = [{
     path: 'affix',
     component: AffixComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'affix'}
  },{
     path: 'breadcrumb',
     component: BreadcrumbComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'breadcrumb'}
  },{
     path: 'dropdown',
     component: DropdownComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'dropdown'}
  },{
     path: 'menu-cmp',
     component: MenuCmpComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'menu-cmp'}
  },{
     path: 'pagination',
     component: PaginationComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'pagination'}
  },{
     path: 'steps',
     component: StepsComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'steps'}
  }]
 @NgModule({
     imports: [ RouterModule.forChild(routes) ],

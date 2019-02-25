@@ -22,26 +22,31 @@ export class AuthGuard implements CanActivate {
 const routes: Routes = [{
     path: '',
     component: HomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { breadcrumb: ''}
 }, {
     path: 'home',
     component: HomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    // data: { breadcrumb: 'home'}
 }, 
 {
     path:'login',
     canActivate: [AuthGuard],
-    loadChildren: './login/login.module#LoginModule'
+    loadChildren: './login/login.module#LoginModule',
+    // data: { breadcrumb: 'login'}
 },
 {
     path: 'cmp',
     canActivate: [AuthGuard],
-    loadChildren: './components/components.module#ComponentsModule'
+    loadChildren: './components/components.module#ComponentsModule',
+    // data: { breadcrumb: 'cmp'}
 },
 {
     path: 'slide-show',
     canActivate: [AuthGuard],
-    loadChildren: './slide-show/slide-show.module#SlideShowModule'
+    loadChildren: './slide-show/slide-show.module#SlideShowModule',
+    // data: { breadcrumb: 'slide-show'}
 },
 // {
 //     path: 'dashboard',

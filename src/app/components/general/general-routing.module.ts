@@ -7,11 +7,11 @@ import { AuthGuard } from '../../app-routing.module';
 const routes: Routes = [{
     path:'button',
     component:ButtonCmpComponent,
-    canActivate:[AuthGuard]
+    data:{ breadcrumb: 'button' }
 },{
     path:'icon',
     component:IconCmpComponent,
-    canActivate:[AuthGuard]
+    data: { breadcrumb: 'icon'}
 }];
 
 @NgModule({

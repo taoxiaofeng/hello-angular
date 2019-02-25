@@ -10,22 +10,22 @@ const routes: Routes = [
             {
                 path: 'general',
                 loadChildren: './general/general.module#GeneralModule',
-                data: { preload: true }
+                data: { breadcrumb: 'general' }
             },
             {
                 path: 'layout',
                 loadChildren: './layout/layout.module#LayoutModule',
-                data: { preload: true }
+                data: { breadcrumb: 'layout' }
             },
             {
                 path: "navigation",
                 loadChildren: './navigation/navigation.module#NavigationModule',
-                data: { preload: true }
+                data: { breadcrumb: 'navigation' }
             },
             {
                 path: "data-entry",
                 loadChildren: './data-entry/data-entry.module#DataEntryModule',
-                data: { preload: true }
+                data: { breadcrumb: 'data-entry' }
             }
         ]
     }

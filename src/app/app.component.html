@@ -3,7 +3,10 @@
     <!-- <aio-top-menu></aio-top-menu> -->
     <div class="my-content">
         <mat-sidenav [matSidenavStatus]="matSidenavStatus" [selectMenu]="selectMenu" [menus]="menus" [style.display]="'flex'"></mat-sidenav>
-        <router-outlet></router-outlet>
+        <div>
+          <app-breadcrumb [autoGenerate]="true"></app-breadcrumb>
+          <router-outlet></router-outlet>
+        </div>
     </div>
     <!-- <div>
     <app-add-banner [ads]="ads"></app-add-banner>

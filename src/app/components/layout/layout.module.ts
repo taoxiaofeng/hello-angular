@@ -9,6 +9,7 @@ import { LayoutCmpComponent } from './layout-cmp/layout-cmp.component';
   imports: [
     CommonModule,
     LayoutRoutingModule
-  ]
+  ],
+  exports:[GridComponent, LayoutCmpComponent]
 })
 export class LayoutModule { }

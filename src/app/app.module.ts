@@ -26,6 +26,7 @@ import { MatSidenavModule } from './common/mat-sidenav/mat-sidenav.module';
 import { AdBannerModule } from './add-banner/ad-banner.module';
 import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
 import { HeroProfileComponent } from './add-banner/hero-profile.component';
+import { NavigationModule } from './components/navigation/navigation.module';
 // import { AdBannerComponent } from './add-banner/ad-banner.component';
 // import { AdService } from './add-banner/ad.service'; 
 // import { AdDirective } from './add-banner/ad.directive';
@@ -49,7 +50,8 @@ import { HeroProfileComponent } from './add-banner/hero-profile.component';
         MyToolbarModule,
         AioTopMenuModule,
         AdBannerModule,
-        MatSidenavModule
+        MatSidenavModule,
+        NavigationModule
     ],
     exports:[
         AppRoutingModule
