@@ -12,6 +12,11 @@ import { BreadcrumbComponent } from './breadcrumb.component';
     app-breadcrumb-item:last-child .breadcrumb-separator {
       display: none;
     }
+
+    .breadcrumb-separator {
+      margin: 0 8px;
+      color: rgba(0,0,0,.45);
+    }
     `]
 })
 export class BreadcrumbItemComponent implements OnInit {

@@ -59,7 +59,7 @@ export class BreadcrumbComponent implements OnInit {
       for (const child of children) {
         if(child.outlet === 'primary') {
           const routeURL: string = child.snapshot.url.map(segment => segment.path).join('/');
-          const nextUrl = url + `/${routeURL}`;
+          const nextUrl = routeURL ? (url + `/${routeURL}`) : url + '';
           if(child.snapshot.data.hasOwnProperty(ROUTE_DATA_BREADCRUMB)) {
             const breadcrumb: BreadcrumbOption = {
               label: child.snapshot.data[ROUTE_DATA_BREADCRUMB] || 'Breadcrumb',
