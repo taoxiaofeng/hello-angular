@@ -8,15 +8,15 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 })
 export class AioTopMenuComponent implements OnInit {
     constructor(
-        private route:ActivatedRoute,
-        private router:Router
+        private route: ActivatedRoute,
+        private router: Router
     ) { }
 
     ngOnInit() { }
 
     //dashboard
     dashboard() {
-        this.router.navigate(['/dashboard/my-dashboard']);
+        this.router.navigate(['/dashboard/']);
     }
     //heroes
     heroes() {
@@ -24,6 +24,10 @@ export class AioTopMenuComponent implements OnInit {
     }
     //dynamic
     dynamic() {
-        this.router.navigate(['/dynamic/dynamic']);
+        this.router.navigate(['/dynamic']);
+    }
+    // routerDemo
+    routerDemo() {
+        this.router.navigate(['/router-demo']);
     }
 }

@@ -18,6 +18,7 @@
 }
 
 .mat-toolbar {
+  min-width: 1080px;
   position: fixed;
   top: 0;
   right: 0;
@@ -25,6 +26,21 @@
   z-index: 10;
   padding: 0 16px 0 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.project-name {
+  width: 176px;
+}
+
+.project-name a{
+  text-decoration: none;
+}
+
+.project-name h1 {
+  font-size: 20px;
+  color: #FFF;
+  padding: 10px;
+  margin: 0 auto;
 }
 
 .hamburger .mat-button {
@@ -52,7 +68,7 @@
 }
 
 .mat-icon {
-  width: 88px;
+  width: 66px;
   height: 64px;
   text-align: center;
   line-height: 80px;
@@ -73,6 +89,8 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.03);
   outline: none;
+  display: flex;
+  justify-content: center;
 }
 
 .ripple {
@@ -101,4 +119,28 @@
   transform: scale(0, 0);
   opacity: .3;
   transition: 0s;
+}
+
+nav > a {
+  color: #ffffff;
+  padding: 10px;
+  margin: 0 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* nav>a:visited,
+a:link {
+  color: #607D8B;
+} */
+
+nav > a:hover {
+  color: #CCCCCC;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+nav > a.active {
+  color: #FFFFFF;
+  background-color: rgba(255,255,255,.2);
 }

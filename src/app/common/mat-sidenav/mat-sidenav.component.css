@@ -1,0 +1,82 @@
+.mat-drawer-inner-container {
+  padding: 0;
+  width: 250px;
+  font-size: 12px;
+  background-color: #fafafa;
+  box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
+}
+
+.sub-menu {
+  min-height: 35px;
+  line-height: 35px;
+  border: none;
+  background-color: transparent;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu-box:hover,
+.three-menu:hover {
+  background-color: #e6f7ff;
+  border-right: 3px solid #1890ff;
+}
+
+.selected {
+  background-color: #e6f7ff;
+  border-right: 3px solid #1890ff;
+}
+
+.sub-menu-box {
+  display: flex;
+}
+
+.sub-menu-box > span {
+  width: 66px;
+  min-width: 66px;
+  text-align: center;
+}
+
+.sub-menu-name {
+  height: 35px;
+  width: 154px;
+  display: flex;
+  white-space: nowrap;
+}
+
+.sub-menu-name .menu-name {
+  width: 106px;
+  display: inline-block;
+}
+
+.mat-container {
+  width: 66px;
+  /* box-shadow: none;
+  visibility: hidden; */
+}
+
+.close {
+  box-shadow: none;
+  visibility: hidden;
+}
+
+.icon-arrows-right,
+.icon-arrows-down {
+  margin: auto 15px;
+}
+
+.open {
+  transform: scale(1) rotate(90deg);
+}
+
+.three-menu {
+  padding-left: 86px;
+  white-space: nowrap;
+}
+
+.icon-user {
+  line-height: 35px;
+}

@@ -1,3 +1,7 @@
+.app-container {
+  display: flex;
+  flex: 1 1 0;
+}
 h1 {
   font-size: 1.2em;
   color: #999;
@@ -10,36 +14,18 @@ h2 {
   padding-top: 0;
 }
 
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
-}
-
-nav a:visited,
-a:link {
-  color: #607D8B;
-}
-
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
-
-nav a.active {
-  color: #039be5;
-}
-
-.my-menu {
-  position: fixed;
-  top: 7px;
-  left: 280px;
-  z-index: 10;
-}
-
 .my-content {
-  margin-top: 80px;
+  position: fixed;
+  left: 0;
+  top: 64px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex: 1 1 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
 }

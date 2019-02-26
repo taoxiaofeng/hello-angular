@@ -1,0 +1,53 @@
+.login {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(to top, #85C1E9, #FDFEFE);
+    z-index: 10;
+}
+
+.login-box {
+    position: absolute;
+    width: 350px;
+    border-radius: 5px;
+    height: 500px;
+    background: white;
+    box-shadow: 0px 0px 5px #333333;
+    top: 50%;
+    left: 50%;
+    z-index: 12;
+    transform: translate(-50%, -50%);
+}
+
+.login-info,
+.operation-box {
+    padding: 10px 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.code-box>input {
+    width: 150px;
+    float: left;
+    margin-right: 5px;
+}
+
+.code-box>span {
+    font-size: 13px;
+    color: blue;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.operation-box>button {
+    width: 100%;
+}
+
+.error-box>span {
+    font-size: 12px;
+    color: red;
+}

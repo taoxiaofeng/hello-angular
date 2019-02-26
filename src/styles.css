@@ -4,7 +4,8 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
-h2, h3 {
+h2,
+h3 {
   color: #444;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
@@ -12,7 +13,9 @@ h2, h3 {
 body {
   margin: 2em;
 }
-body, input[text], button {
+body,
+input[text],
+button {
   color: #888;
   font-family: Cambria, Georgia;
 }
@@ -45,18 +48,23 @@ nav a {
   margin-right: 10px;
   margin-top: 10px;
   display: inline-block;
-  background-color: #eee;
+  /* background-color: #eee; */
   border-radius: 4px;
 }
-nav a:visited, a:link {
-  color: #607D8B;
+nav a:visited,
+a:link {
+  color: #607d8b;
 }
-nav a:hover {
+/* nav a:hover {
   color: #039be5;
-  background-color: #CFD8DC;
-}
-nav a.active {
+  background-color: #cfd8dc;
+} */
+/* nav a.active {
   color: #039be5;
+} */
+nav > a.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* everywhere else */
@@ -64,4 +72,26 @@ nav a.active {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@import './app/anticon.css';
+@import "./app/anticon.css";
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: hsla(0, 0%, 100%, 0.6);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba(95, 95, 95, 0.4);
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(95, 95, 95, 0.7);
+}

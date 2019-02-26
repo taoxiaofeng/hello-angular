@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectorRef } from '@angular/core';
 import { AdComponent } from './ad.component';
 @Component({
     template: `
@@ -15,11 +15,18 @@ import { AdComponent } from './ad.component';
 export class HeroProfileComponent implements AdComponent {
     @Input() data: any;
 
+    constructor(
+        private changeDetectorRef: ChangeDetectorRef
+    ) { }
+
     ngOnInit() {
-        console.log(this.data);
+        // console.log(this.data);
     }
 
     ngAfterViewInit() {
         // this.data.detach(); //停止检测
+        // this.changeDetectorRef.detach();
+        this.changeDetectorRef.markForCheck();
+        this.changeDetectorRef.detectChanges();
     }
 }

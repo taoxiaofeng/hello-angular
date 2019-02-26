@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'my-home',
     template:`
-    <h1 class="welcome">欢迎使用</h1>
-    <div class="welcome-img">
-        
+    <div class="welcome-box">
+        <span class="welcome">知识点一二三四五六七八九十</span>
     </div>
     `,
     styles:[`
-    .welcome,
-    .welcome-img {
-        text-align: center;
+    .welcome-box {
+        display:flex;
+        flex:1 1 0;
     }
     `]
 }) 
