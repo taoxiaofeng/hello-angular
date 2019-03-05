@@ -5,7 +5,7 @@
   "description": "Example project from an angular.io guide.",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 1010",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
