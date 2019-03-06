@@ -3,6 +3,7 @@ import { Injectable, ModuleWithProviders, NgModule } from '@angular/core';
 import { Routes, RouterModule, CanActivate, Router } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { ChatComponent } from './common/chat/chat.component';
+import { LoginGuard } from './guard/login-guard';
 
 // import { DashboardComponent } from './dashboard/dashboard.component';
 // import { DashboardComponent } from './dashboard.component';
@@ -39,7 +40,7 @@ const routes: Routes = [{
 },
 {
     path: 'cmp',
-    canActivate: [AuthGuard],
+    canActivate: [LoginGuard],
     loadChildren: './components/components.module#ComponentsModule',
     // data: { breadcrumb: 'cmp'}
 },
@@ -95,6 +96,6 @@ export const appRoutingProviders: any[] = [
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
-    providers: [AuthGuard]
+    providers: [AuthGuard,LoginGuard]
 })
 export class AppRoutingModule { }

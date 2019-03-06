@@ -29,7 +29,6 @@ export class AdBannerComponent implements AfterViewInit, OnDestroy {
     ) { };
 
     ngAfterViewInit() {
-        // console.log(this.ads);
         this.loadComponent();
         this.getAds();
     }

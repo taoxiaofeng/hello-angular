@@ -19,6 +19,5 @@ export class ParentComponent implements OnInit {
     ngAfterContentInit(): void {
         //Called after ngOnInit when the component's or directive's content has been initialized.
         //Add 'implements AfterContentInit' to the class.
-        console.log(this.childCmps);
     }
 }

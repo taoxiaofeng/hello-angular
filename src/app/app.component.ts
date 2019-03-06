@@ -35,7 +35,6 @@ export class AppComponent {
 
     //获取 matSidenav 状态
     getMatSidenavStatus($event:boolean) {
-        console.log($event);
         this.matSidenavStatus = $event;
     }
 

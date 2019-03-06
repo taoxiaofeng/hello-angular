@@ -14,8 +14,6 @@ export class WarpperComponent implements OnInit {
     ngOnInit() {
     }
 
-    getStatus() {
-        console.log(this.template);
-    }
+    getStatus() {}
 
 }

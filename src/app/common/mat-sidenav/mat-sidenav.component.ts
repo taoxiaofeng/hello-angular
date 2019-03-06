@@ -19,7 +19,6 @@ export class MatSidenavComponent implements OnInit {
     ngOnChanges(changes: SimpleChanges): void {
         //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
         //Add '${implements OnChanges}' to the class.
-        console.log("chanages", changes);
         if (changes.selectMenu && changes.selectMenu.currentValue) {
             let curValue = changes.selectMenu.currentValue;
             if (curValue.children && curValue.children.length > 0) {

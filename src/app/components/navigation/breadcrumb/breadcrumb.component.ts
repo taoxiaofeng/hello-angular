@@ -26,7 +26,7 @@ export class BreadcrumbComponent implements OnInit {
     ngOnInit() {
       if(this.autoGenerate) {
         try {
-          debugger
+          
           const activatedRoute = this.injector.get(ActivatedRoute);
           const router = this.injector.get(Router);
           router.events.pipe(filter(e => e instanceof NavigationEnd), takeUntil(this.destroy$)).subscribe(() => {
@@ -52,7 +52,6 @@ export class BreadcrumbComponent implements OnInit {
 
     private getBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: BreadcrumbOption[] = []): BreadcrumbOption[] {
       const children: ActivatedRoute[] = route.children;
-      console.log(route,breadcrumbs);
       if( children.length === 0) {
         return breadcrumbs;
       }
