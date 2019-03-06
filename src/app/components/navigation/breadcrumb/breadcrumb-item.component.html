@@ -2,5 +2,5 @@
     <ng-content></ng-content>
 </span>
 <span class="breadcrumb-separator">
-    <ng-container>{{breadcrumbComponent.separator}}</ng-container>
+    <ng-container *appStringTemplateOutlet="breadcrumbComponent.separator">{{breadcrumbComponent.separator}}</ng-container>
 </span>

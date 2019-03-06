@@ -27,6 +27,7 @@ import { AdBannerModule } from './add-banner/ad-banner.module';
 import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
 import { HeroProfileComponent } from './add-banner/hero-profile.component';
 import { NavigationModule } from './components/navigation/navigation.module';
+import { ChatModule } from './common/chat/chat.module';
 // import { AdBannerComponent } from './add-banner/ad-banner.component';
 // import { AdService } from './add-banner/ad.service'; 
 // import { AdDirective } from './add-banner/ad.directive';
@@ -51,7 +52,8 @@ import { NavigationModule } from './components/navigation/navigation.module';
         AioTopMenuModule,
         AdBannerModule,
         MatSidenavModule,
-        NavigationModule
+        NavigationModule,
+        ChatModule
     ],
     exports:[
         AppRoutingModule

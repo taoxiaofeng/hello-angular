@@ -8,12 +8,14 @@ import { MenuCmpComponent } from './menu-cmp/menu-cmp.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { StepsComponent } from './steps/steps.component';
 import { BreadcrumbItemComponent } from './breadcrumb/breadcrumb-item.component';
+import { AddonModule } from '../core/addon/addon.module';
 
 @NgModule({
   declarations: [ BreadcrumbComponent,BreadcrumbItemComponent, AffixComponent, DropdownComponent, MenuCmpComponent, PaginationComponent, StepsComponent ],
   imports: [
     CommonModule,
-    NavigationRoutingModule
+    NavigationRoutingModule,
+    AddonModule
   ],
   exports:[ BreadcrumbComponent,BreadcrumbItemComponent, AffixComponent, DropdownComponent, MenuCmpComponent, PaginationComponent, StepsComponent ]
 })

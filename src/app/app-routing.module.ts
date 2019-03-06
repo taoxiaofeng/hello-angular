@@ -2,6 +2,7 @@ import { LoginComponent } from './login/login.component';
 import { Injectable, ModuleWithProviders, NgModule } from '@angular/core';
 import { Routes, RouterModule, CanActivate, Router } from '@angular/router';
 import { HomeComponent } from './home.component';
+import { ChatComponent } from './common/chat/chat.component';
 
 // import { DashboardComponent } from './dashboard/dashboard.component';
 // import { DashboardComponent } from './dashboard.component';
@@ -46,6 +47,13 @@ const routes: Routes = [{
     path: 'slide-show',
     canActivate: [AuthGuard],
     loadChildren: './slide-show/slide-show.module#SlideShowModule',
+    // data: { breadcrumb: 'slide-show'}
+},
+{
+    path: 'chat',
+    canActivate: [AuthGuard],
+    component: ChatComponent,
+    outlet:'aux'
     // data: { breadcrumb: 'slide-show'}
 },
 // {
