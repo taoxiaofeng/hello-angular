@@ -17,22 +17,22 @@ import { AppComponent } from './app.component';
 import { HeroService } from './hero.service';
 import { HomeComponent } from './home.component';
 
-//首页用的组件
+// 首页用的组件
 import { MyToolbarModule } from './common/my-toolbar/my-toolbar.module';
 import { AioTopMenuModule } from './common/aio-top-menu/aio-top-menu.module';
 import { MatSidenavModule } from './common/mat-sidenav/mat-sidenav.module';
 
-//动态组件相关
+// 动态组件相关
 import { AdBannerModule } from './add-banner/ad-banner.module';
 import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
 import { HeroProfileComponent } from './add-banner/hero-profile.component';
 import { NavigationModule } from './components/navigation/navigation.module';
 import { ChatModule } from './common/chat/chat.module';
 // import { AdBannerComponent } from './add-banner/ad-banner.component';
-// import { AdService } from './add-banner/ad.service'; 
+// import { AdService } from './add-banner/ad.service';
 // import { AdDirective } from './add-banner/ad.directive';
 
-//指令
+// 指令
 // import { HighlightDirective } from './attribute-directive/highlight.directive';
 /**
  * declarations - 声明本模块中拥有的视图类。Angular 有三种视图类：组件、指令和管道。
@@ -55,7 +55,7 @@ import { ChatModule } from './common/chat/chat.module';
         NavigationModule,
         ChatModule
     ],
-    exports:[
+    exports: [
         AppRoutingModule
     ],
     declarations: [

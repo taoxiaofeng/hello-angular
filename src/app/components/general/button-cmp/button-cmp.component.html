@@ -1,3 +1,17 @@
-<p>
-    button-cmp works!
-</p>
+<div class="button-box">
+    <header>
+        头信息
+    </header>
+    <section>
+        <ng-container *ngFor="let item of testList">
+            <img *ngIf="item.imgList[0] === '中国'" src="../../../../assets/images/中国-01.png" alt="">
+            <img *ngIf="item.imgList[0] === '美国'" src="assets/images/美国-01.png" alt="">
+            <img *ngIf="item.imgList[0] === '英国'" src="assets/images/英国-01.png" alt="">
+            <img *ngIf="item.imgList[0] === '葡萄牙'" src="assets/images/葡萄牙-01.png" alt="">
+        </ng-container>
+        <button (click)="update();">更新内容</button>
+    </section>
+    <footer>
+
+    </footer>
+</div>

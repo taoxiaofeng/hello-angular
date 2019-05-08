@@ -1,0 +1,13 @@
+.button-box {
+    padding: 10px;
+}
+
+.button-box section {
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+}
+
+.button-box section img {
+    width: 130px;
+    height: 80px;
+}

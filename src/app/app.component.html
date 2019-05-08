@@ -12,7 +12,7 @@
             <div>
                 <router-outlet></router-outlet>
             </div>
-            <div>
+            <div *ngIf="expression">
                 <a [routerLink]="[{outlets:{primary:'home', aux:'chat'}}]">开始聊天</a>
                 <a [routerLink]="[{outlets:{aux:null}}]">结束聊天</a>
                 <router-outlet name="aux"></router-outlet>
