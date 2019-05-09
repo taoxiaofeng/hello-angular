@@ -234,8 +234,16 @@ export class MenuService {
             iconSrc: "",
             type: [],
             name: "一级菜单三",
-            url: "/home",
-            children: []
+            url: "/function-points",
+            children: [
+                {
+                    id: 2001,
+                    iconSrc: "",
+                    type: [],
+                    name: "points",
+                    url: "/function-points/points", 
+                }
+            ]
         },
         {
             id: 4,

@@ -51,6 +51,12 @@ const routes: Routes = [{
     // data: { breadcrumb: 'slide-show'}
 },
 {
+    path: 'function-points',
+    canActivate: [AuthGuard],
+    loadChildren: './function-points/function-points.module#FunctionPointsModule',
+    // data: { breadcrumb: 'slide-show'}
+},
+{
     path: 'chat',
     canActivate: [AuthGuard],
     component: ChatComponent,
