@@ -242,7 +242,7 @@ export class MenuService {
             iconSrc: "",
             type: [],
             name: "一级菜单四",
-            url: "/cmp",
+            url: "/home",
             children: []
         }
     ];

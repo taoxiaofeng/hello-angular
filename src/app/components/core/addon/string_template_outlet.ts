@@ -13,7 +13,6 @@ export class AppStringTemplateOutletDirective {
 
 	@Input()
 	set appStringTemplateOutlet(value: string | TemplateRef<void>) {
-		
 		if (value instanceof TemplateRef) {
 			this.isTemplate = true;
 			this.inputTemplate = value;
