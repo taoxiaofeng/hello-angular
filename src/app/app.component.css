@@ -29,3 +29,14 @@ h2 {
   flex-direction: column;
   flex: 1 1 0;
 }
+
+.breadcrumb-box {
+    width: 100%;
+    height: 35px;
+    background: #F5F5F5;
+    line-height: 2.5;
+}
+
+.breadcrumb-box app-breadcrumb {
+    height: 100%;
+}

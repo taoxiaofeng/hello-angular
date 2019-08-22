@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, SimpleChanges } from "@angular/core";
+import { Component, OnInit, Input, Output, SimpleChanges, Renderer2 } from "@angular/core";
 import { Router } from "@angular/router";
 import { Menus } from "../../menu/menu";
 
@@ -14,7 +14,18 @@ export class MatSidenavComponent implements OnInit {
     // public menuUnfold:boolean = false;
     public selectSubMenu: any;
     public selectThreeMenu: any;
-    constructor(public router: Router) { }
+    constructor(
+        public router: Router,
+        public renderer: Renderer2
+    ) {
+        let resizeTimer: NodeJS.Timer = null;
+        renderer.listen('window', 'resize', (event) => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                this.matSidenavStatus = !(event.target.innerWidth <= 1024);
+            }, 150)
+        });
+    }
 
     ngOnChanges(changes: SimpleChanges): void {
         //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
@@ -37,7 +48,9 @@ export class MatSidenavComponent implements OnInit {
             }
         }
     }
-    ngOnInit() { }
+    ngOnInit() {
+        this.matSidenavStatus = !(document.body.clientWidth <= 1024);
+    }
 
     //展开菜单
     checkedMenus(hierarchy: string, menu: any) {

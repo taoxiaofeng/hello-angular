@@ -28,6 +28,7 @@ import { HeroJobAdComponent } from './add-banner/hero-job-ad.component';
 import { HeroProfileComponent } from './add-banner/hero-profile.component';
 import { NavigationModule } from './components/navigation/navigation.module';
 import { ChatModule } from './common/chat/chat.module';
+import { CommonModule } from '@angular/common';
 // import { AdBannerComponent } from './add-banner/ad-banner.component';
 // import { AdService } from './add-banner/ad.service';
 // import { AdDirective } from './add-banner/ad.directive';
@@ -45,6 +46,7 @@ import { ChatModule } from './common/chat/chat.module';
     imports: [
         BrowserModule,
         FormsModule,
+        CommonModule,
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule,

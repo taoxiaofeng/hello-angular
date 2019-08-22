@@ -6,7 +6,7 @@
   box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
   visibility: visible;
   transition: all 0.5s ease-in-out;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .sub-menu {
@@ -17,12 +17,49 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .sub-menu-box:hover,
 .three-menu:hover {
   background-color: #e6f7ff;
   border-right: 3px solid #1890ff;
+}
+
+.sub-menu:hover .mini-three-menu li {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  overflow: hidden;
+  color: rgba(201, 203, 205, 0.8);
+  background-color: rgba(32, 43, 47, 0.8);
+  transition: all .3s ease;
+}
+
+.mini-three-menu {
+  padding: 0;
+  position: absolute;
+  left: 66px;
+  max-height: 250px;
+  overflow: overlay;
+}
+
+.mini-three-menu li {
+  width: 0;
+  height: 35px;
+  line-height: 40px;
+  text-align: center;
+  overflow: hidden;
+  color: rgba(201, 203, 205, 0);
+  background-color: rgba(32, 43, 47, 0);
+  transition: all .3s ease;
+}
+
+.mini-three-menu li:hover {
+  color: #fff !important;
+  cursor: pointer;
+  background: #1890ff !important;
 }
 
 .selected {
@@ -32,9 +69,10 @@
 
 .sub-menu-box {
   display: flex;
+  overflow: hidden;
 }
 
-.sub-menu-box > span {
+.sub-menu-box>span {
   width: 66px;
   min-width: 66px;
   text-align: center;
@@ -75,6 +113,7 @@
 .three-menu {
   padding-left: 86px;
   white-space: nowrap;
+  position: relative;
 }
 
 .icon-user {
