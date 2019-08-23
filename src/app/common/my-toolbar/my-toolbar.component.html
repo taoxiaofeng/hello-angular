@@ -1,23 +1,22 @@
-<div class="my-toolbar my-toolbar-row  my-toolbar-primary mat-toolbar">
-    <div class="mat-icon">
-        <button class="ripple" (click)="sidenavStatus()">
-            <img src="../../../assets/images/menu.svg" alt="">
-        </button>
-    </div>
-    <div class="project-name">
-        <a class="nav-link home" href="/">
-            <!-- <div class="home-img"></div> -->
-            <!-- <img src="{{host}}{{angularLogoImg}}" alt=""> -->
-            <h1>知识库</h1>
-        </a>
-    </div>
-    <nav class="my-menu">
-        <!-- <a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
+<div class="my-toolbar my-toolbar-row flex my-toolbar-primary mat-toolbar">
+  <div class="mat-icon" (click)="sidenavStatus()">
+    <img src="../../../assets/images/menu.svg" alt="">
+  </div>
+  <div class="project-name">
+    <a class="nav-link home" href="/">
+      <!-- <div class="home-img"></div> -->
+      <!-- <img src="{{host}}{{angularLogoImg}}" alt=""> -->
+      <h1>知识库</h1>
+    </a>
+  </div>
+  <nav class="my-menu">
+    <!-- <a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
         <a routerLink="/hero" routerLinkActive="active">HEROES</a>
         <a routerLink="/dynamic" routerLinkActive="active">DYNAMIC</a>
         <a routerLink="/router-demo" routerLinkActive="active">ROUTERDEMO</a> -->
-        <ng-container *ngFor="let menu of menus">
-            <a routerLink="{{ menu.url }}" [class.active]="selectMenu.name == menu.name" (click)="choose(menu);">{{menu.name}}</a>
-        </ng-container>
-    </nav>
+    <ng-container *ngFor="let menu of menus">
+      <a routerLink="{{ menu.url }}" [class.active]="selectMenu.name == menu.name"
+        (click)="choose(menu);">{{menu.name}}</a>
+    </ng-container>
+  </nav>
 </div>

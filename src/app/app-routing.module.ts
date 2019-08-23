@@ -25,15 +25,15 @@ const routes: Routes = [{
     path: '',
     component: HomeComponent,
     pathMatch: 'full',
-    data: { breadcrumb: ''}
+    data: { breadcrumb: '' }
 }, {
     path: 'home',
     component: HomeComponent,
     pathMatch: 'full',
     // data: { breadcrumb: 'home'}
-}, 
+},
 {
-    path:'login',
+    path: 'login',
     canActivate: [AuthGuard],
     loadChildren: './login/login.module#LoginModule',
     // data: { breadcrumb: 'login'}
@@ -60,34 +60,34 @@ const routes: Routes = [{
     path: 'chat',
     canActivate: [AuthGuard],
     component: ChatComponent,
-    outlet:'aux'
+    outlet: 'aux'
     // data: { breadcrumb: 'slide-show'}
 },
-// {
-//     path: 'dashboard',
-//     canActivate: [AuthGuard],
-//     loadChildren: './dashboard/dashboard.module#DashboardModule'
-// }, {
-//     path: 'hero',
-//     canActivate: [AuthGuard],
-//     loadChildren: './hero/heroes.module#HeroesModule',
-//     data: { preload: true }
-// }, {
-//     path: 'dynamic',
-//     canActivate: [AuthGuard],
-//     loadChildren: './dynamic/dynamic.module#DynamicModule',
-//     data: { preload: true }
-// }, {
-//     path: 'router-demo',
-//     canActivate: [AuthGuard],
-//     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
-//     data: { preload: true }
-// }, {
-//     path: 'router-demo/:id/:name',
-//     canActivate: [AuthGuard],
-//     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
-//     data: { preload: true }
-// }
+    // {
+    //     path: 'dashboard',
+    //     canActivate: [AuthGuard],
+    //     loadChildren: './dashboard/dashboard.module#DashboardModule'
+    // }, {
+    //     path: 'hero',
+    //     canActivate: [AuthGuard],
+    //     loadChildren: './hero/heroes.module#HeroesModule',
+    //     data: { preload: true }
+    // }, {
+    //     path: 'dynamic',
+    //     canActivate: [AuthGuard],
+    //     loadChildren: './dynamic/dynamic.module#DynamicModule',
+    //     data: { preload: true }
+    // }, {
+    //     path: 'router-demo',
+    //     canActivate: [AuthGuard],
+    //     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
+    //     data: { preload: true }
+    // }, {
+    //     path: 'router-demo/:id/:name',
+    //     canActivate: [AuthGuard],
+    //     loadChildren: './router-demo/router-demo.module#RouterDemoModule',
+    //     data: { preload: true }
+    // }
 ];
 
 // { path: 'detail/:id', component: HeroDetailComponent },
@@ -100,8 +100,8 @@ export const appRoutingProviders: any[] = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, { enableTracing: true })],
     exports: [RouterModule],
-    providers: [AuthGuard,LoginGuard]
+    providers: [AuthGuard, LoginGuard]
 })
 export class AppRoutingModule { }

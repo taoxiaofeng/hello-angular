@@ -15,7 +15,6 @@
   border: none;
   background-color: transparent;
   list-style: none;
-  display: flex;
   flex-direction: column;
   position: relative;
 }
@@ -68,8 +67,8 @@
 }
 
 .sub-menu-box {
-  display: flex;
   overflow: hidden;
+  line-height: 3.75;
 }
 
 .sub-menu-box>span {
@@ -81,7 +80,6 @@
 .sub-menu-name {
   height: 35px;
   width: 154px;
-  display: flex;
   white-space: nowrap;
 }
 

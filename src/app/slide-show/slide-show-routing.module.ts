@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../app-routing.module';
 import { NgContentComponent } from './ng-content/ng-content.component';
+import { SwitchViewComponent } from './switch-view/switch-view.component';
 
 const routes: Routes = [{
     path: '',
@@ -9,6 +10,10 @@ const routes: Routes = [{
         path: 'ng-content',
         canActivate: [AuthGuard],
         component: NgContentComponent
+    },{
+        path: 'switch-view',
+        canActivate: [AuthGuard],
+        component: SwitchViewComponent
     }]
 }]
 
@@ -18,4 +23,4 @@ const routes: Routes = [{
     exports: [RouterModule],
     providers: [],
 })
-export class SlideShowRoutingRouting { }
+export class SlideShowRouting { }

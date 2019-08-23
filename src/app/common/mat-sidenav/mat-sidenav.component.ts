@@ -18,7 +18,7 @@ export class MatSidenavComponent implements OnInit {
         public router: Router,
         public renderer: Renderer2
     ) {
-        let resizeTimer: NodeJS.Timer = null;
+        let resizeTimer: any = null;
         renderer.listen('window', 'resize', (event) => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {

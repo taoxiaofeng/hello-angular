@@ -1,0 +1,13 @@
+.view-box {
+    padding: 10px;
+}
+
+.view-box section {
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+}
+
+.view-box section img {
+    width: 130px;
+    height: 80px;
+}

@@ -1,25 +1,25 @@
-<div class="app-container">
-    <my-toolbar [selectMenu]="selectMenu" [menus]="menus" (exportMatSidenavStatus)="getMatSidenavStatus($event);"
-        (exportMenu)="getMenu($event);"></my-toolbar>
-    <!-- <aio-top-menu></aio-top-menu> -->
-    <div class="my-content">
-        <mat-sidenav [matSidenavStatus]="matSidenavStatus" [selectMenu]="selectMenu" [menus]="menus"
-            [style.display]="'flex'"></mat-sidenav>
-        <div class="page">
-            <div class="breadcrumb-box">
-                <app-breadcrumb [autoGenerate]="true"></app-breadcrumb>
-            </div>
-            <div>
-                <router-outlet></router-outlet>
-            </div>
-            <!-- <div>
+<div class="flex flex-1">
+  <my-toolbar [selectMenu]="selectMenu" [menus]="menus" (exportMatSidenavStatus)="getMatSidenavStatus($event);"
+    (exportMenu)="getMenu($event);"></my-toolbar>
+  <!-- <aio-top-menu></aio-top-menu> -->
+  <div class="my-content flex flex-1">
+    <mat-sidenav [matSidenavStatus]="matSidenavStatus" [selectMenu]="selectMenu" [menus]="menus"
+      [style.display]="'flex'"></mat-sidenav>
+    <div class="flex flex-1 flex-column">
+      <div class="breadcrumb-box">
+        <app-breadcrumb [autoGenerate]="true"></app-breadcrumb>
+      </div>
+      <div class="component-container felx flex-1">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- <div>
                 <a [routerLink]="[{outlets:{primary:'home', aux:'chat'}}]">开始聊天</a>
                 <a [routerLink]="[{outlets:{aux:null}}]">结束聊天</a>
                 <router-outlet name="aux"></router-outlet>
             </div> -->
-        </div>
     </div>
-    <!-- <div>
+  </div>
+  <!-- <div>
     <app-add-banner [ads]="ads"></app-add-banner>
   </div> -->
 </div>

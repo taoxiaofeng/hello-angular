@@ -1,7 +1,4 @@
-.app-container {
-  display: flex;
-  flex: 1 1 0;
-}
+
 h1 {
   font-size: 1.2em;
   color: #999;
@@ -20,14 +17,6 @@ h2 {
   top: 64px;
   right: 0;
   bottom: 0;
-  display: flex;
-  flex: 1 1 0;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 0;
 }
 
 .breadcrumb-box {
@@ -39,4 +28,8 @@ h2 {
 
 .breadcrumb-box app-breadcrumb {
     height: 100%;
+}
+
+.component-container {
+    position: relative;
 }

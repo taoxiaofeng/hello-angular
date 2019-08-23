@@ -226,6 +226,13 @@ export class MenuService {
                     type: [],
                     name: "ng-content",
                     url: "/slide-show/ng-content", 
+                },
+                {
+                    id: 2002,
+                    iconSrc: "",
+                    type: [],
+                    name: "switch-view",
+                    url: "/slide-show/switch-view"
                 }
             ]
         },
@@ -237,7 +244,7 @@ export class MenuService {
             url: "/function-points",
             children: [
                 {
-                    id: 2001,
+                    id: 3001,
                     iconSrc: "",
                     type: [],
                     name: "points",
