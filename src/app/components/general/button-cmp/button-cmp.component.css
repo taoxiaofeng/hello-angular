@@ -1,9 +1,75 @@
 .button-box {
-    padding: 10px;
+  padding: 10px;
+}
+
+.button-box .left-content>div {
+  min-width: 100px;
+}
+
+.btn-demo-container {
+  padding: 4px 8px;
+  float: left;
+}
+
+.btn-demo-box {
+  padding: 42px 24px 50px;
+  color: rgba(0, 0, 0, .65);
+  border: 1px solid #1890ff;
+}
+
+.btn-demo-box>div {
+  flex-wrap: wrap;
+}
+
+.btn-demo-box button {
+  width: 76px;
+  height: 32px;
+  margin: 0 8px 12px 0;
 }
 
 .button-box .right-content {
-    width: 110px;
-    min-width: 110px;
-    border-left: 1px solid #D9D9D9;
+  width: 110px;
+  min-width: 110px;
+  border-left: 1px solid #D9D9D9;
+}
+
+.anchor-box {
+  font-size: 12px;
+}
+
+.anchor-box li {
+  padding: 7px 0 7px 16px;
+  line-height: 1.143;
+}
+
+.anchor-box li:hover {
+  color: #1890ff;
+}
+
+.btn-show-box {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.btn-box-meta {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 0 0 2px 2px;
+    transition: background-color .4s;
+}
+
+.btn-box-title {
+    position: absolute;
+    top: -14px;
+    margin-left: 16px;
+    padding: 1px 8px;
+    color: #777;
+    background: #fff;
+    border-radius: 2px 2px 0 0;
+    transition: background-color .4s;
+}
+
+.btn-box-describe {
+    padding: 18px 24px 12px;
 }
