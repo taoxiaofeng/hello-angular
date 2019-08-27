@@ -1,0 +1,26 @@
+<div class="flex flex1 flex-column">
+  <div class="flex flex1 flex-wrap btn-show-box">
+      <ng-container *ngFor="let item of btnList">
+          <button [class]="item.className">{{item.name}}</button>
+      </ng-container>
+      
+    <!-- <button class="ip-btn ip-btn-primary">Primary</button>
+    <button class="ip-btn ip-btn-default">Default</button>
+    <button class="ip-btn ip-btn-loading">Loading</button>
+    <button class="ip-btn ip-btn-danger">Danger</button>
+    <button class="ip-btn ip-btn-block">Block</button>
+    <button class="ip-btn ip-btn-group">Group</button>
+    <button class="ip-btn ip-btn-error">Error</button>
+    <button class="ip-btn ip-btn-link">Link</button> -->
+  </div>
+  <section class="btn-box-meta">
+    <div class="btn-box-title">
+      <span>按钮类型</span>
+      <span class="iconfont icon-edit"></span>
+    </div>
+    <div class="btn-box-describe">
+      <P>按钮分类八种类型：Primary、Default、Loading、Danger、Block、Group、Error、Link。</P>
+    </div>
+    <div class="btn-box-code"></div>
+  </section>
+</div>

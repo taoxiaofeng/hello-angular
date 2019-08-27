@@ -1,55 +1,32 @@
 <div class="button-box full-fill flex flex-1">
   <div class="left-content">
-    <div class="btn-demo-container flex" [style.width]="bodyClientWidth ? '50%' : '100%'">
+    <div class="btn-demo-container flex flex-column" [style.width]="bodyClientWidth ? '50%' : '100%'">
       <div class="btn-demo-box">
-        <div class="flex flex1">
-          <div class="flex flex1 flex-wrap btn-show-box">
-            <button class="ip-btn ip-btn-primary">Primary</button>
-            <button class="ip-btn ip-btn-default">Default</button>
-            <button class="ip-btn ip-btn-loading">Loading</button>
-            <button class="ip-btn ip-btn-danger">Danger</button>
-            <button class="ip-btn ip-btn-block">Block</button>
-            <button class="ip-btn ip-btn-group">Group</button>
-            <button class="ip-btn ip-btn-error">Error</button>
-            <button class="ip-btn ip-btn-link">Link</button>
-          </div>
-          <section class="btn-box-meta">
-            <div class="btn-box-title">
-                <span>按钮类型</span>
-                <span class="iconfont icon-edit"></span>
-            </div>
-            <div class="btn-box-describe">
-                <P>按钮分类八种类型：Primary、Default、Loading、Danger、Block、Group、Error、Link。</P>
-            </div>
-            <div class="btn-box-code"></div>
-          </section>
-        </div>
-        <div class="flex1"></div>
-        <div class="flex1"></div>
-        <div class="flex1"></div>
-        <div class="flex1"></div>
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+      </div>
+      <div class="btn-demo-box">
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+      </div>
+      <div class="btn-demo-box">
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+      </div>
+      <div class="btn-demo-box">
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
       </div>
     </div>
     <div #buttonDemoBox class="btn-demo-container flex" [style.width]="bodyClientWidth ? '50%' : '100%'">
       <div class="btn-demo-box">
-        <div class="flex flex1">
-          <div class="flex flex1 flex-wrap btn-show-box">
-            <button class="ip-btn ip-btn-primary">Primary</button>
-            <button class="ip-btn ip-btn-default">Default</button>
-            <button class="ip-btn ip-btn-loading">Loading</button>
-            <button class="ip-btn ip-btn-danger">Danger</button>
-            <button class="ip-btn ip-btn-block">Block</button>
-            <button class="ip-btn ip-btn-group">Group</button>
-            <button class="ip-btn ip-btn-error">Error</button>
-            <button class="ip-btn ip-btn-link">Link</button>
-          </div>
-        </div>
-        <div class="flex1"></div>
-        <div class="flex1"></div>
-        <div class="flex1"></div>
-        <div class="flex1"></div>
-        <div class="flex1"></div>
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
       </div>
+      <!-- <div class="btn-demo-box">
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+      </div>
+      <div class="btn-demo-box">
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+      </div>
+      <div class="btn-demo-box">
+        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+      </div> -->
     </div>
   </div>
   <div class="right-content felx-1">

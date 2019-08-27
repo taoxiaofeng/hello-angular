@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { ButtonCmpService } from './button-cmp.service';
-import { ButtonAnchor } from './mock-button-anchor';
+import { ButtonModal, BtnOption } from './mock-button-anchor';
 
 @Component({
     selector: 'app-button-cmp',
@@ -9,8 +9,10 @@ import { ButtonAnchor } from './mock-button-anchor';
     providers: [ButtonCmpService]
 })
 export class ButtonCmpComponent implements OnInit, AfterViewInit {
-    public buttonAnchor: ButtonAnchor[];
-    public bodyClientWidth:boolean = document.body.clientWidth >= 800;
+    public buttonAnchor: ButtonModal[];
+    public bodyClientWidth: boolean = document.body.clientWidth >= 800;
+    public buttonList: ButtonModal[];
+    public option: BtnOption;
     @ViewChild('buttonDemoBox') buttonDemoBox: ElementRef;
     constructor(
         private renderer: Renderer2,
@@ -23,6 +25,7 @@ export class ButtonCmpComponent implements OnInit, AfterViewInit {
 
     ngOnInit(): void {
         this.getButtonAnchor();
+        this.getButtonList();
     }
 
     ngAfterViewInit(): void {
@@ -32,6 +35,11 @@ export class ButtonCmpComponent implements OnInit, AfterViewInit {
     getButtonAnchor(): void {
         this.buttonCmpService.getButtonAnchor()
             .subscribe(buttonAnchor => this.buttonAnchor = buttonAnchor);
+    }
+
+    getButtonList(): void {
+        this.buttonCmpService.getButtonList()
+            .subscribe(buttonList => this.buttonList = buttonList);
     }
 
 }

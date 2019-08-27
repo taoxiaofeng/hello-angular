@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { GeneralRoutingModule } from './general-routing.module';
 import { IconCmpComponent } from "./icon-cmp/icon-cmp.component";
 import { ButtonCmpComponent } from "./button-cmp/button-cmp.component";
+import { ButtonDemoModule } from '../components-demo/button-demo/button-demo.module';
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import { ButtonCmpComponent } from "./button-cmp/button-cmp.component";
     imports: [
         CommonModule,
         FormsModule,
-        GeneralRoutingModule
+        GeneralRoutingModule,
+        ButtonDemoModule
     ],
     exports: [
         ButtonCmpComponent,

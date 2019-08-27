@@ -1,5 +1,6 @@
 .button-box {
   padding: 10px;
+  overflow: auto;
 }
 
 .button-box .left-content>div {
@@ -15,6 +16,7 @@
   padding: 42px 24px 50px;
   color: rgba(0, 0, 0, .65);
   border: 1px solid #1890ff;
+  margin-bottom: 5px;
 }
 
 .btn-demo-box>div {
@@ -46,30 +48,3 @@
   color: #1890ff;
 }
 
-.btn-show-box {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #D9D9D9;
-}
-
-.btn-box-meta {
-    position: relative;
-    width: 100%;
-    font-size: 14px;
-    border-radius: 0 0 2px 2px;
-    transition: background-color .4s;
-}
-
-.btn-box-title {
-    position: absolute;
-    top: -14px;
-    margin-left: 16px;
-    padding: 1px 8px;
-    color: #777;
-    background: #fff;
-    border-radius: 2px 2px 0 0;
-    transition: background-color .4s;
-}
-
-.btn-box-describe {
-    padding: 18px 24px 12px;
-}
