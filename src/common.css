@@ -1057,7 +1057,7 @@ a.ip-btn.disabled, fieldset:disabled a.ip-btn {
 
 .ip-btn-block {
     display: block;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .ip-btn-block+.ip-btn-block {

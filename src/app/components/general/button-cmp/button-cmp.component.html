@@ -1,38 +1,24 @@
 <div class="button-box full-fill flex flex-1">
   <div class="left-content">
     <div class="btn-demo-container flex flex-column" [style.width]="bodyClientWidth ? '50%' : '100%'">
-      <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
-      </div>
-      <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
-      </div>
-      <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
-      </div>
-      <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+      <div class="btn-demo-box" *ngFor="let mBtn of mockButton" [class.active]="mBtn.anchor === checkedAnchor?.id">
+        <app-button-demo [mockData]="mBtn"></app-button-demo>
       </div>
     </div>
-    <div #buttonDemoBox class="btn-demo-container flex" [style.width]="bodyClientWidth ? '50%' : '100%'">
-      <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
+    <div class="btn-demo-container flex flex-column" [style.width]="bodyClientWidth ? '50%' : '100%'">
+      <div class="btn-demo-box" *ngFor="let mBtn of mockButton" [class.active]="mBtn.anchor === checkedAnchor?.id">
+        <app-button-demo [option]="rightBtnOption" [mockData]="mBtn"></app-button-demo>
       </div>
-      <!-- <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
-      </div>
-      <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
-      </div>
-      <div class="btn-demo-box">
-        <app-button-demo [option]="option" [btnList]="buttonList"></app-button-demo>
-      </div> -->
     </div>
   </div>
   <div class="right-content felx-1">
     <ul class="anchor-box">
-      <li *ngFor="let anchor of buttonAnchor">
-        {{anchor.name}}
+      <div class="anchor-line">
+            <div class="anchor-line-icon" #timeFill></div>
+      </div>
+      <li *ngFor="let anchor of buttonAnchor" #anchorNode [class.active]="checkedAnchor?.id === anchor.id"
+        (click)="chooseAnchor(anchor,anchorNode)">
+        <span>{{anchor.name}}</span>
       </li>
     </ul>
   </div>

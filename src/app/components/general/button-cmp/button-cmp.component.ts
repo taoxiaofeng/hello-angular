@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { ButtonCmpService } from './button-cmp.service';
-import { ButtonModal, BtnOption } from './mock-button-anchor';
+import { ButtonModal, BtnOption, MockButton } from './mock-button-anchor';
 
 @Component({
     selector: 'app-button-cmp',
@@ -11,9 +11,12 @@ import { ButtonModal, BtnOption } from './mock-button-anchor';
 export class ButtonCmpComponent implements OnInit, AfterViewInit {
     public buttonAnchor: ButtonModal[];
     public bodyClientWidth: boolean = document.body.clientWidth >= 800;
-    public buttonList: ButtonModal[];
-    public option: BtnOption;
-    @ViewChild('buttonDemoBox') buttonDemoBox: ElementRef;
+    public mockButton: MockButton[];
+    public checkedAnchor: any;
+    public rightBtnOption: BtnOption = {
+        width: '110px'
+    };
+    @ViewChild('timeFill') timeFill: ElementRef;
     constructor(
         private renderer: Renderer2,
         private buttonCmpService: ButtonCmpService
@@ -39,7 +42,13 @@ export class ButtonCmpComponent implements OnInit, AfterViewInit {
 
     getButtonList(): void {
         this.buttonCmpService.getButtonList()
-            .subscribe(buttonList => this.buttonList = buttonList);
+            .subscribe(mockButton => this.mockButton = mockButton);
+    }
+
+    chooseAnchor(anchor: any, anchorNode: HTMLElement) {
+        this.checkedAnchor = { ...anchor };
+        this.timeFill.nativeElement.style.top = anchorNode.offsetTop + 7 + 'px';
+        this.chooseAnchor && (JSON.stringify(this.chooseAnchor) !== '{}') ? this.timeFill.nativeElement.style.display = 'block' : this.timeFill.nativeElement.style.display = 'none';
     }
 
 }

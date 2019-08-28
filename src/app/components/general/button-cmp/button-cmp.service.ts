@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ButtonModal, BUTTON_ANCHOR, BUTTON_LIST } from './mock-button-anchor';
+import { ButtonModal, BUTTON_ANCHOR, MockButton, MOCK_BUTTON } from './mock-button-anchor';
 
 @Injectable({
     providedIn: 'root'
@@ -19,8 +19,8 @@ export class ButtonCmpService {
     /**
      * 获取按钮类型列表
      */
-    getButtonList(): Observable<ButtonModal[]> {
-        return of(BUTTON_LIST);
+    getButtonList(): Observable<MockButton[]> {
+        return of(MOCK_BUTTON);
     }
 }
 
