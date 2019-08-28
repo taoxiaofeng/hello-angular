@@ -5,6 +5,7 @@ import { GeneralRoutingModule } from './general-routing.module';
 import { IconCmpComponent } from "./icon-cmp/icon-cmp.component";
 import { ButtonCmpComponent } from "./button-cmp/button-cmp.component";
 import { ButtonDemoModule } from '../components-demo/button-demo/button-demo.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { ButtonDemoModule } from '../components-demo/button-demo/button-demo.mod
         CommonModule,
         FormsModule,
         GeneralRoutingModule,
-        ButtonDemoModule
+        ButtonDemoModule,
+        HttpClientModule
     ],
     exports: [
         ButtonCmpComponent,
