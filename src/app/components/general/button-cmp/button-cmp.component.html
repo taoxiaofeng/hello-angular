@@ -1,4 +1,4 @@
-<div class="button-box full-fill flex flex-1">
+<div class="button-box full-fill flex flex-1" #buttonBox>
   <div class="left-content">
     <div class="btn-demo-container flex flex-column" [style.width]="bodyClientWidth ? '50%' : '100%'">
       <div class="btn-demo-box" *ngFor="let mBtn of mockButton" [class.active]="mBtn.anchor === checkedAnchor?.id">
@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="right-content felx-1">
+  <div class="right-content felx-1" #anchorBox>
     <ul class="anchor-box">
       <div class="anchor-line">
             <div class="anchor-line-icon" #timeFill></div>
