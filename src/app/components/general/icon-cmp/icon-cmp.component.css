@@ -1,0 +1,79 @@
+.icon-box {
+    padding: 10px 125px 10px 10px;
+    overflow: auto;
+}
+
+.block-icon-list ul {
+    list-style: none;
+}
+
+.block-icon-list>ul>li {
+    margin: 9px 8px;
+    float: left;
+    width: 100px;
+    height: 136px;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    border: 1px dashed transparent;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.09);
+}
+
+.block-icon-list li .icon {
+    max-width: 100%;
+}
+
+.icon {
+    font-size: 36px;
+}
+
+.svg-box {
+    margin: 10px;
+}
+
+.block-icon-list>ul>li .icon-cover {
+    width: 100%;
+    height: 100%;
+    background: rgba(13,10,49,.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.block-icon-list>ul>li:hover .icon-cover {
+    display: block;
+} 
+
+.block-icon-list li .icon-cover .cover-item {
+    width: 50%;
+    height: 52.5px;
+    font-size: 22px;
+    color: #fff;
+    line-height: 2.38;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.block-icon-list>ul>li .icon-cover .cover-code {
+    height: 28px;
+    line-height: 26px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.block-icon-list>ul>li .icon-cover .cover-code .copy-brfore {
+    display: inline-block;
+    position: relative;
+}
+
+.block-icon-list>ul>li .icon-cover .cover-code .copy-brfore .iconfot {
+    font-size: 14px;
+    vertical-align: -1px;
+    margin-right: 3px;
+}

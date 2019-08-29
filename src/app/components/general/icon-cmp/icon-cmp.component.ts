@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { IconCmpService } from './icon-cmp.service';
 
 @Component({
@@ -7,19 +7,24 @@ import { IconCmpService } from './icon-cmp.service';
     styleUrls: ['./icon-cmp.component.css'],
     providers: [IconCmpService]
 })
-export class IconCmpComponent implements OnInit {
-
+export class IconCmpComponent implements OnInit, AfterViewInit {
+    public IconList: any[] = [];
     constructor(
         private iconCmpService: IconCmpService
     ) { }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.getIconData();
     }
 
+    ngAfterViewInit(): void {}
+
     getIconData() {
-        this.iconCmpService.getIconData().subscribe(iconData => {
-            console.log(iconData);
+        this.iconCmpService.getIconData().subscribe(res => {
+            console.log(res);
+            if (res && res.code === 200 && res.data && res.data.icons) {
+                this.IconList = res.data.icons;
+            }
         })
     }
 

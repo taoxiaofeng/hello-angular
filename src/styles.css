@@ -2,6 +2,19 @@
     flex-wrap: wrap;
 }
 
+/* icon 组件中的icon图标样式 */
+.block-icon-list {
+    color: #666666;
+}
+
+.block-icon-list li .icon {
+    max-width: 100%;
+}
+
+.icon {
+    font-size: 36px;
+}
+
 
 
 

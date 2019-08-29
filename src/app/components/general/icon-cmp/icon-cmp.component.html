@@ -1,3 +1,24 @@
-<p>
-  icon-cmp works!
-</p>
+<div class="icon-box full-fill flex flex-1">
+  <div class="left-content block-icon-list">
+    <ul>
+      <li *ngFor="let icon of IconList">
+        <div class="flex flex-column">
+          <div class="svg-box" [innerHTML]="icon.show_svg | iconSvgHtml"></div>
+          <span>{{icon.name}}</span>
+          <span>{{'icon-' + icon.font_class}}</span>
+        </div>
+        <div class="icon-cover">
+          <span class="cover-item iconfont icon-star"></span>
+          <span class="cover-item iconfont icon-modify"></span>
+          <span class="cover-item iconfont icon-trash"></span>
+          <span class="cover-item iconfont icon-download"></span>
+          <div class="cover-code">
+            <span class="iconfont icon-copy"></span>
+            <span class="copy-before">复制代码</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="right-content"></div>
+</div>

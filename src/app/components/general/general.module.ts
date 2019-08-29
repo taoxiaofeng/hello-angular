@@ -6,11 +6,13 @@ import { IconCmpComponent } from "./icon-cmp/icon-cmp.component";
 import { ButtonCmpComponent } from "./button-cmp/button-cmp.component";
 import { ButtonDemoModule } from '../components-demo/button-demo/button-demo.module';
 import { HttpClientModule } from '@angular/common/http';
+import { IconSvgHtmlPipe } from './icon-cmp/icon-svg-html.pipe';
 
 @NgModule({
     declarations: [
         ButtonCmpComponent,
-        IconCmpComponent
+        IconCmpComponent,
+        IconSvgHtmlPipe
     ],
     imports: [
         CommonModule,
