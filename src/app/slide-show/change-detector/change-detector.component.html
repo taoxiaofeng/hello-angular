@@ -1,0 +1,7 @@
+<div class="change-detector">
+  <h1>变更检测策略</h1>
+  <p>{{ slogan }}</p>
+  <button class="ip-btn ip-btn-outline-default" (click)="changeStar();">改变明星属性</button>
+  <button class="ip-btn ip-btn-outline-default" (click)="changeStarObject();">改变明星对象</button>
+  <app-movie [title]="title" [star]="star" [addCount]="count"></app-movie>
+</div>

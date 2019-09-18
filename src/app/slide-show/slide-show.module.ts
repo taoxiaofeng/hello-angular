@@ -5,16 +5,20 @@ import { SharedModule } from '../shared.module';
 import { SlideShowRouting } from './slide-show-routing.module';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { SwitchViewComponent } from './switch-view/switch-view.component';
+import { ChangeDetectorComponent } from './change-detector/change-detector.component';
+import { MovieModule } from '../common/movie/movie.module';
 
 @NgModule({
     declarations: [
         NgContentComponent,
-        SwitchViewComponent
+        SwitchViewComponent,
+        ChangeDetectorComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
         SharedModule,
+        MovieModule,
         SlideShowRouting
     ],
     exports:[

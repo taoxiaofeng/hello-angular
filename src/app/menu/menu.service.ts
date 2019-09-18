@@ -233,6 +233,13 @@ export class MenuService {
                     type: [],
                     name: "switch-view",
                     url: "/slide-show/switch-view"
+                },
+                {
+                    id: 2003,
+                    iconSrc: "",
+                    type: [],
+                    name: "change-detector",
+                    url: "/slide-show/change-detector"
                 }
             ]
         },
