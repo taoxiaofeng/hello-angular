@@ -17,18 +17,25 @@ export class ChangeDetectorComponent implements OnInit {
         firstName: '周',
         lastName: '杰伦'
     };
-    count: Observable<any>;
+    addCount: Observable<any>;
     constructor(
         public changeRef: ChangeDetectorRef
     ) { }
 
     ngOnInit() {
-        this.count = timer(0 , 1000);
+        this.addCount = timer(0 , 1000);
+        // console.log('parentCom:',this.addCount)
+        // let tempNum = timer(0,1000);
+        // const subscribe = tempNum.subscribe(val => console.log(val));
+        setTimeout(() => {
+            console.log(this.star)
+        },60000)
     }
 
     changeStar() {
         this.star.firstName = '吴';
         this.star.lastName = '彦祖';
+        // this.changeRef.detectChanges();
         // setTimeout(() =>{
         //     this.changeRef.markForCheck();
         // },1000);
