@@ -11,6 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -32,6 +33,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -41,10 +48,12 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }]
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             }
           }
         },
@@ -78,7 +87,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "assets": [             
+            "assets": [
               "src/assets",
               "src/font",
               "src/favicon.ico"
@@ -135,6 +144,11 @@
           "options": {
             "tsConfig": "projects/y/tsconfig.lib.json",
             "project": "projects/y/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/y/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -164,10 +178,13 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "css"
+      "style": "css"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "analytics": "e15bc053-bf2d-4722-89f4-9a62bd2f20fc"
   }
 }

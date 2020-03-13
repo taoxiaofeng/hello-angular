@@ -35,25 +35,25 @@ const routes: Routes = [{
 {
     path: 'login',
     canActivate: [AuthGuard],
-    loadChildren: './login/login.module#LoginModule',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
     // data: { breadcrumb: 'login'}
 },
 {
     path: 'cmp',
     canActivate: [LoginGuard],
-    loadChildren: './components/components.module#ComponentsModule',
+    loadChildren: () => import('./components/components.module').then(m => m.ComponentsModule),
     // data: { breadcrumb: 'cmp'}
 },
 {
     path: 'slide-show',
     canActivate: [AuthGuard],
-    loadChildren: './slide-show/slide-show.module#SlideShowModule',
+    loadChildren: () => import('./slide-show/slide-show.module').then(m => m.SlideShowModule),
     // data: { breadcrumb: 'slide-show'}
 },
 {
     path: 'function-points',
     canActivate: [AuthGuard],
-    loadChildren: './function-points/function-points.module#FunctionPointsModule',
+    loadChildren: () => import('./function-points/function-points.module').then(m => m.FunctionPointsModule),
     // data: { breadcrumb: 'slide-show'}
 },
 {

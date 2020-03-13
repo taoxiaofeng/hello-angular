@@ -10,22 +10,22 @@ const routes: Routes = [
         children: [
             {
                 path: 'general',
-                loadChildren: './general/general.module#GeneralModule',
+                loadChildren: () => import('./general/general.module').then(m => m.GeneralModule),
                 data: { breadcrumb: 'general' }
             },
             {
                 path: 'layout',
-                loadChildren: './layout/layout.module#LayoutModule',
+                loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule),
                 data: { breadcrumb: 'layout' }
             },
             {
                 path: "navigation",
-                loadChildren: './navigation/navigation.module#NavigationModule',
+                loadChildren: () => import('./navigation/navigation.module').then(m => m.NavigationModule),
                 data: { breadcrumb: 'navigation' }
             },
             {
                 path: "data-entry",
-                loadChildren: './data-entry/data-entry.module#DataEntryModule',
+                loadChildren: () => import('./data-entry/data-entry.module').then(m => m.DataEntryModule),
                 data: { breadcrumb: 'data-entry' }
             }
         ]
