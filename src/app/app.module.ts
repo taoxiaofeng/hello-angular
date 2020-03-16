@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppRoutingModule } from './app-routing.module';
+
+// 导入 BrowserAnimationsModule, 它能把动画能力引入 Angular 应用的根模块中
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -48,14 +50,15 @@ import { CommonModule } from '@angular/common';
         FormsModule,
         CommonModule,
         HttpModule,
-        InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule,
         MyToolbarModule,
         AioTopMenuModule,
         AdBannerModule,
         MatSidenavModule,
         NavigationModule,
-        ChatModule
+        ChatModule,
+        BrowserAnimationsModule,
+        InMemoryWebApiModule.forRoot(InMemoryDataService)
     ],
     exports: [
         AppRoutingModule

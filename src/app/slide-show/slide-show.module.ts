@@ -7,12 +7,16 @@ import { NgContentComponent } from './ng-content/ng-content.component';
 import { SwitchViewComponent } from './switch-view/switch-view.component';
 import { ChangeDetectorComponent } from './change-detector/change-detector.component';
 import { MovieModule } from '../common/movie/movie.module';
+import { OpenCloseComponent } from './open-close/open-close.component';
+import { InsertRemoveComponent } from './insert-remove/insert-remove.component';
 
 @NgModule({
     declarations: [
         NgContentComponent,
         SwitchViewComponent,
-        ChangeDetectorComponent
+        ChangeDetectorComponent,
+        OpenCloseComponent,
+        InsertRemoveComponent
     ],
     imports: [
         CommonModule,

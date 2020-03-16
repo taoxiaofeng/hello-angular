@@ -9,7 +9,9 @@
       <div class="breadcrumb-box">
         <app-breadcrumb [autoGenerate]="true"></app-breadcrumb>
       </div>
+      <!-- [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container" -->
       <div class="component-container felx flex-1">
+        <!-- <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p> -->
         <router-outlet></router-outlet>
       </div>
       <!-- <div>

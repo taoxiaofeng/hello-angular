@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.insert-remove-container {
+  border: 1px solid #dddddd;
+  background-color: #2ecc71;
+  margin-top: 1em;
+  padding: 20px 20px 0 20px;
+  color: #000000;
+  font-family: bold;
+  font-size: 20px;
+}

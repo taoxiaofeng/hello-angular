@@ -4,10 +4,31 @@ import { AdItem } from './add-banner/ad-item';
 import { MenuService } from './menu/menu.service';
 import { Router } from '@angular/router';
 import { InMemoryDataService } from './in-memory-data.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
     // tslint:disable-next-line: component-selector
     selector: 'my-app',
+    animations: [
+        trigger('openClose', [
+            state('open', style({
+                height: '200px',
+                opacity: 1,
+                backgroundColor: 'yellow'
+            })),
+            state('closed', style({
+                height: '100px',
+                opacity: 0.5,
+                backgroundColor: 'green'
+            })),
+            transition('open => closed', [
+                animate('1s')
+            ]),
+            transition('closed => open', [
+                animate('0.5s')
+            ])
+        ])
+    ],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     providers: [MenuService, InMemoryDataService]
@@ -18,7 +39,7 @@ export class AppComponent {
     menus: any[] = [];
     matSidenavStatus = true;
     selectMenu: any;
-
+    isOpen = true;
 
     constructor(
         private adService: AdService,
@@ -55,6 +76,10 @@ export class AppComponent {
             .subscribe(heroes => {
                 console.log(heroes);
             });
+    }
+
+    toggle() {
+        this.isOpen = !this.isOpen;
     }
 
 }
