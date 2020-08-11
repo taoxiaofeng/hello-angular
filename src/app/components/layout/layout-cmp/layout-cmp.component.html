@@ -1,3 +1,10 @@
-<p>
-  layout-cmp works!
-</p>
+<div style="width: 600px; height: 500px;padding: 10px; overflow: auto; background: #3498db;position: relative;" #containerBox>
+    <div class="list-box" style="position: relative;">
+        <ul style="height: 300px;list-style: none;position: absolute;background: red;border: 5px solid #9b59b6;" #ulBox>
+            <li *ngFor="let item of ['测试','测试','测试','测试','测试','测试']; let i = index;">
+                <input type="text" name="" id="" #item value="{{item}}"> {{item + i}}
+            </li>
+        </ul>
+    </div>
+    <div style="width:800px; height: 500px;margin-left: 60px; background: yellow;"></div>
+</div>
