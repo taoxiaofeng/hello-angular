@@ -8,7 +8,7 @@ import { fromEvent } from 'rxjs';
 })
 export class LayoutCmpComponent implements OnInit, AfterViewInit {
 
-
+    public item = 'ITEM';
     @ViewChild('ulBox') ulBox: ElementRef;
     @ViewChild('containerBox') containerBox: ElementRef;
     constructor(
