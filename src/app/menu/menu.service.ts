@@ -254,6 +254,13 @@ export class MenuService {
                     type: [],
                     name: 'app-insert-remove',
                     url: '/slide-show/app-insert-remove'
+                },
+                {
+                    id: 2006,
+                    iconSrc: '',
+                    type: [],
+                    name: 'app-lazy-loading',
+                    url: '/slide-show/app-lazy-loading'
                 }
             ]
         },

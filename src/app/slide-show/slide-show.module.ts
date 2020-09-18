@@ -9,6 +9,7 @@ import { ChangeDetectorComponent } from './change-detector/change-detector.compo
 import { MovieModule } from '../common/movie/movie.module';
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { InsertRemoveComponent } from './insert-remove/insert-remove.component';
+import { LazyLoadingComponent } from './lazy-loading/lazy-loading.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { InsertRemoveComponent } from './insert-remove/insert-remove.component';
         SwitchViewComponent,
         ChangeDetectorComponent,
         OpenCloseComponent,
-        InsertRemoveComponent
+        InsertRemoveComponent,
+        LazyLoadingComponent
     ],
     imports: [
         CommonModule,

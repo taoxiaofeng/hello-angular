@@ -6,6 +6,7 @@ import { SwitchViewComponent } from './switch-view/switch-view.component';
 import { ChangeDetectorComponent } from './change-detector/change-detector.component';
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { InsertRemoveComponent } from './insert-remove/insert-remove.component';
+import { LazyLoadingComponent } from './lazy-loading/lazy-loading.component';
 
 const routes: Routes = [{
     path: '',
@@ -35,8 +36,13 @@ const routes: Routes = [{
         canActivate: [AuthGuard],
         component: InsertRemoveComponent,
         data: { breadcrumb: 'app-insert-remove' }
+    }, {
+        path: 'app-lazy-loading',
+        canActivate: [AuthGuard],
+        component: LazyLoadingComponent,
+        data: { breadcrumb: 'app-lazy-loading' }
     }]
-}]
+}];
 
 @NgModule({
     declarations: [],

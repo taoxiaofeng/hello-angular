@@ -2,7 +2,6 @@ import { Component, OnInit, Renderer2, AfterViewInit, ViewChild, ElementRef } fr
 import { ButtonCmpService } from './button-cmp.service';
 import { ButtonModal, BtnOption, MockButton } from './mock-button-anchor';
 import { fromEvent } from 'rxjs';
-import { throttleTime,debounceTime } from 'rxjs/operators';
 
 @Component({
     selector: 'app-button-cmp',
@@ -57,17 +56,17 @@ export class ButtonCmpComponent implements OnInit, AfterViewInit {
     }
 
     bindScroll() {
-        if(!this.buttonBox && !this.buttonBox.nativeElement) { return; }
-        let buttonBoxScroll = fromEvent(this.buttonBox.nativeElement, 'scroll');
+        if (!this.buttonBox && !this.buttonBox.nativeElement) { return; }
+        const buttonBoxScroll = fromEvent(this.buttonBox.nativeElement, 'scroll');
         buttonBoxScroll.pipe(
             // throttleTime(150),
             // debounceTime(150),
         ).subscribe((event: Event) => {
-            if(event.target) {
-                let target = event.target as HTMLElement;
-                this.anchorBox.nativeElement.style.top =  `${target.scrollTop + 10}px`;
+            if (event.target) {
+                const target = event.target as HTMLElement;
+                this.anchorBox.nativeElement.style.top = `${target.scrollTop + 10}px`;
             }
-        })
+        });
     }
 
 
